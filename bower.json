@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "durandal-mimosa-node",
   "version": "0.1.0",
   "dependencies": {
     "jquery":"1.9.1",
