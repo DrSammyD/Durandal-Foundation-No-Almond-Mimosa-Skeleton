@@ -1,20 +1,20 @@
 exports.config =
   minMimosaVersion:'0.14.6'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include', 'web-package']
+  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include', 'web-package', 'bower']
 
   combine:
     folders: [
       {
         folder:'Content'
         output:'Content/styles.css'
-        order: ['bootstrap.css', 'bootstrap-responsive.css']
+        order: ['bower/bootstrap/bootstrap.css', 'bower/bootstrap/bootstrap-responsive.css']
         exclude: [/[\\\/]font[\\\/]/, /[\\\/]images[\\\/]/]
       }
       {
         folder:'Scripts'
         output:'Scripts/vendor.js'
-        order: ['jquery-1.9.1.js', 'knockout-2.2.1.js']
+        order: ['bower/jquery/jquery.js', 'bower/knockout.js/knockout.js']
       }
     ]
 
@@ -43,3 +43,11 @@ exports.config =
         stubModules: ['text']
         paths:
           text: 'durandal/amd/text'
+
+  bower:
+    copy:
+      outRoot: "bower"
+      forceLatest:true
+      mainOverrides:
+        sammy:["lib/sammy.js"]
+        bootstrap:["docs/assets/js/bootstrap.js", "docs/assets/css/bootstrap.css", "docs/assets/css/bootstrap-responsive.css"]

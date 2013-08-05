@@ -1,0 +1,38 @@
+{
+  "bowerDir": {
+    "path": ".mimosa/bower/bower_components",
+    "clean": true,
+    "pathFull": ""
+  },
+  "copy": {
+    "enabled": true,
+    "trackChanges": true,
+    "outRoot": "bower",
+    "defaultStrategy": "packageRoot",
+    "strategy": {},
+    "forceLatest": true,
+    "exclude": [],
+    "overridesArrays": {
+      "sammy": [
+        "lib/sammy.js"
+      ],
+      "bootstrap": [
+        "docs/assets/js/bootstrap.js",
+        "docs/assets/css/bootstrap.css",
+        "docs/assets/css/bootstrap-responsive.css"
+      ]
+    },
+    "overridesObjects": {},
+    "mainOverrides": {
+      "sammy": [
+        "lib/sammy.js"
+      ],
+      "bootstrap": [
+        "docs/assets/js/bootstrap.js",
+        "docs/assets/css/bootstrap.css",
+        "docs/assets/css/bootstrap-responsive.css"
+      ]
+    },
+    "pathMod": {}
+  }
+}

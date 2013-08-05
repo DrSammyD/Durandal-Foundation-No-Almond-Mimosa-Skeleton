@@ -19,6 +19,7 @@
   "devDependencies": {
     "mimosa-combine":"0.8.2",
     "mimosa-requirebuild-textplugin-include":"0.5.0",
-    "mimosa-web-package":"0.12.1"
+    "mimosa-web-package":"0.12.1",
+    "mimosa-bower":"0.7.1"
   }
 }

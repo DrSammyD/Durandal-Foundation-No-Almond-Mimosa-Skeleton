@@ -7192,15 +7192,15 @@ a.badge:hover {
     height: 100%;
     background: black;
     opacity: 0;
-    
+
     pointer-events: auto;
-    
+
     -webkit-backface-visibility: hidden;
-    
-    -webkit-transition: opacity 0.1s linear; 
-	-moz-transition: opacity 0.1s linear; 
+
+    -webkit-transition: opacity 0.1s linear;
+	-moz-transition: opacity 0.1s linear;
 	-o-transition: opacity 0.1s linear;
-	transition: opacity 0.1s linear; 
+	transition: opacity 0.1s linear;
 }
 
 .modalHost {
@@ -7208,11 +7208,11 @@ a.badge:hover {
     left: 50%;
     position: fixed;
     opacity: 0;
-    
+
     -webkit-backface-visibility: hidden;
 
-    -webkit-transition: opacity 0.1s linear; 
-	-moz-transition: opacity 0.1s linear; 
+    -webkit-transition: opacity 0.1s linear;
+	-moz-transition: opacity 0.1s linear;
 	-o-transition: opacity 0.1s linear;
 	transition: opacity 0.1s linear;
 }

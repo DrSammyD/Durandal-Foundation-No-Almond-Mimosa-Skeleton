@@ -1,0 +1,8 @@
+[
+  "assets/Scripts/bower/knockout.js/knockout.js",
+  "assets/Scripts/bower/jquery/jquery.js",
+  "assets/Scripts/bower/sammy/sammy.js",
+  "assets/Scripts/bower/bootstrap/bootstrap.js",
+  "assets/Content/bower/bootstrap/bootstrap.css",
+  "assets/Content/bower/bootstrap/bootstrap-responsive.css"
+]
