@@ -1,7 +1,7 @@
 exports.config =
   minMimosaVersion:'0.14.6'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include']
+  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include', 'web-package']
 
   combine:
     folders: [
