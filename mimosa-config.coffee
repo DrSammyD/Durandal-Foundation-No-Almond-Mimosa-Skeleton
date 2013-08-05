@@ -1,7 +1,7 @@
 exports.config =
-  minMimosaVersion:'0.10.0'
+  minMimosaVersion:'0.14.6'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'mimosa-requirebuild-textplugin-include', 'skeleton']
+  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include']
 
   combine:
     folders: [
@@ -21,15 +21,15 @@ exports.config =
   watch:
     javascriptDir: 'App'
 
-  server:
-    port: 3000
-    defaultServer:
-      enabled: true
-      onePager: true
+  vendor:
+    javascripts:"Scripts"
+    stylesheets:"Content"
 
+  server:
+    path: "server.js"
     views:
-      compileWith: 'html'
-      extension: 'html'
+      compileWith: 'handlebars'
+      extension: 'hbs'
 
   requireBuildTextPluginInclude:
     pluginPath: 'text'
