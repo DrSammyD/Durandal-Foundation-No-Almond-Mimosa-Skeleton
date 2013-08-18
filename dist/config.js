@@ -8,14 +8,19 @@ var config = {
       "public"
     ],
     "javascriptDir": [
-      "App"
+      "javascripts",
+      "app"
     ],
     "exclude": [],
     "throttle": 0,
+    "interval": 100,
+    "binaryInterval": 300,
+    "usePolling": true,
     "excludeRegex": {},
     "compiledJavascriptDir": [
       "public",
-      "App"
+      "javascripts",
+      "app"
     ]
   },
   "liveReload": {

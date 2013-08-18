@@ -1,12 +1,8 @@
-Durandal Mimosa Node Server Skeleton
+Durandal Mimosa Skeleton
 ========================
 
-This repository contains the Durandal skeleton for the Mimosa browser development toolkit. This version of the skeleton comes package with an Express server and Handlebars views.  Because everything is better with node.
+This repository contains the Durandal skeleton for the Mimosa browser development toolkit.
 
-Once you have the code:
-
-1. `npm install`
-2. `mimosa watch -s`
-3. http://localhost:3000
-
-This skeleton comes ready to deploy to Heroku.  [Follow the instructions](http://mimosajs.com/about.html#Heroku) to get your app into Heroku.
+1. Use `make start` to start up an asset server and begin coding immediately.
+2. Use `make build-opt` to create your optimized application. The deployable source will be output to a 'dist' folder.
+3. See the [Mimosa](http://mimosajs.com/) project for details on how to customize the solution and use other features.

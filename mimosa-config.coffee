@@ -1,29 +1,56 @@
 exports.config =
-  minMimosaVersion:'0.14.6'
 
-  modules: ['server', 'require', 'minify', 'live-reload', 'combine', 'requirebuild-textplugin-include', 'web-package', 'bower']
+  # 0.14.12 is needed for optimization to work properly
+  minMimosaVersion:'0.14.12'
+
+  modules: [
+    'server'
+    'require'
+    'minify'
+    'live-reload'
+    'lint'
+    'combine'
+    'requirebuild-include'
+    'requirebuild-textplugin-include'
+    'bower'
+    'web-package'
+  ]
+
+  watch:
+    javascriptDir: 'javascripts/app'
+
+  requireBuildTextPluginInclude:
+    pluginPath: 'text'
+    extensions: ['html']
+
+  requireBuildInclude:
+    folder:"javascripts"
+    patterns: ['app/**/*.js', 'vendor/durandal/**/*.js']
+
+  bower:
+    copy:
+      mainOverrides:
+        "knockout.js":["knockout.js","knockout-2.3.0.debug.js"]
+        "bootstrap": [
+          "docs/assets/js/bootstrap.js"
+          "docs/assets/css/bootstrap.css"
+          "docs/assets/css/bootstrap-responsive.css"
+        ]
 
   combine:
     folders: [
       {
-        folder:'Content'
-        output:'Content/styles.css'
-        order: ['bower/bootstrap/bootstrap.css', 'bower/bootstrap/bootstrap-responsive.css']
-        exclude: [/[\\\/]font[\\\/]/, /[\\\/]images[\\\/]/]
-      }
-      {
-        folder:'Scripts'
-        output:'Scripts/vendor.js'
-        order: ['bower/jquery/jquery.js', 'bower/knockout.js/knockout.js']
+        folder:'stylesheets'
+        output:'stylesheets/styles.css'
+        order: [
+          'vendor/bootstrap/bootstrap.css'
+          'vendor/bootstrap/bootstrap-responsive.css'
+          'vendor/font-awesome.css'
+          'durandal.css'
+          'starterkit.css'
+        ]
       }
     ]
-
-  watch:
-    javascriptDir: 'App'
-
-  vendor:
-    javascripts:"Scripts"
-    stylesheets:"Content"
 
   server:
     path: "server.js"
@@ -31,23 +58,11 @@ exports.config =
       compileWith: 'handlebars'
       extension: 'hbs'
 
-  requireBuildTextPluginInclude:
-    pluginPath: 'text'
-    extensions: ['html']
-
   require:
     optimize:
       overrides:
-        name: 'durandal/amd/almond-custom'
+        name: '../vendor/almond-custom'
         inlineText: true
         stubModules: ['text']
-        paths:
-          text: 'durandal/amd/text'
-
-  bower:
-    copy:
-      outRoot: "bower"
-      forceLatest:true
-      mainOverrides:
-        sammy:["lib/sammy.js"]
-        bootstrap:["docs/assets/js/bootstrap.js", "docs/assets/css/bootstrap.css", "docs/assets/css/bootstrap-responsive.css"]
+        pragmas:
+          build: true
