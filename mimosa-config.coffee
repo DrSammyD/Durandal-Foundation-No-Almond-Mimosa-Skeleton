@@ -41,6 +41,13 @@ exports.config =
           "css/font-awesome.css"
           "css/font-awesome-ie7.css"
         ]
+        "durandal": [
+          {
+            img: "../../images"
+            js: "durandal"
+            css: "durandal"
+          }
+        ]
 
   combine:
     folders: [
@@ -51,7 +58,7 @@ exports.config =
           'vendor/bootstrap/bootstrap.css'
           'vendor/bootstrap/bootstrap-responsive.css'
           'vendor/font-awesome/font-awesome.css'
-          'durandal.css'
+          'vendor/durandal/durandal.css'
           'starterkit.css'
         ]
       }

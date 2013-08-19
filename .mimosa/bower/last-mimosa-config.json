@@ -30,6 +30,11 @@
     "overridesObjects": {
       "font-awesome": {
         "font": "../../font"
+      },
+      "durandal": {
+        "img": "../../images",
+        "js": "durandal",
+        "css": "durandal"
       }
     },
     "mainOverrides": {
@@ -48,8 +53,15 @@
         },
         "css/font-awesome.css",
         "css/font-awesome-ie7.css"
+      ],
+      "durandal": [
+        {
+          "img": "../../images",
+          "js": "durandal",
+          "css": "durandal"
+        }
       ]
     },
-    "pathMod": {}
+    "pathMod": null
   }
 }
