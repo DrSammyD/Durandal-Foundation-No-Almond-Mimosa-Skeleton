@@ -1,14 +1,14 @@
 exports.config =
 
-  # 0.14.12 is needed for optimization to work properly
-  minMimosaVersion:'0.14.12'
+  minMimosaVersion:'1.1.0'
 
   modules: [
     'server'
     'require'
     'minify'
     'live-reload'
-    'lint'
+    'jshint'
+    'csslint'
     'combine'
     'requirebuild-include'
     'requirebuild-textplugin-include'
