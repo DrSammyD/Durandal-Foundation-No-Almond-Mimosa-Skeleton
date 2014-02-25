@@ -7,6 +7,7 @@ exports.config =
     'require'
     'minify-js'
     'minify-css'
+    'sass'
     'live-reload'
     'jshint'
     'csslint'
@@ -21,6 +22,11 @@ exports.config =
   watch:
     javascriptDir: 'javascripts/app'
 
+  sass:
+    lib: require('node-sass')
+    extensions: ["sass", "scss"]
+    includePaths: ['bower_components/foundation/scss']
+
   requireBuildTextPluginInclude:
     pluginPath: 'text'
     extensions: ['html']
@@ -33,16 +39,7 @@ exports.config =
     copy:
       mainOverrides:
         "knockout.js":["knockout.js","knockout-2.3.0.debug.js"]
-        "bootstrap": [
-          "docs/assets/js/bootstrap.js"
-          "docs/assets/css/bootstrap.css"
-          "docs/assets/css/bootstrap-responsive.css"
-        ]
-        "font-awesome": [
-          { font: "../../font" }
-          "css/font-awesome.css"
-          "css/font-awesome-ie7.css"
-        ]
+        
         "durandal": [
           {
             img: "../../images"
@@ -57,9 +54,6 @@ exports.config =
         folder:'stylesheets'
         output:'stylesheets/styles.css'
         order: [
-          'vendor/bootstrap/bootstrap.css'
-          'vendor/bootstrap/bootstrap-responsive.css'
-          'vendor/font-awesome/font-awesome.css'
           'vendor/durandal/durandal.css'
           'starterkit.css'
         ]

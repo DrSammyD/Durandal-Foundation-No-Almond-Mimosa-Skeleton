@@ -1,16 +1,10 @@
 {
   "shims": {
-    "/javascripts/app/main.js": {
-      "bootstrap": {
-        "deps": [
-          "jquery"
-        ],
-        "exports": "jQuery"
-      }
-    }
+    "/javascripts/app/main.js": {}
   },
   "deps": {
     "/javascripts/app/main.js": [
+      "require",
       "durandal/app",
       "durandal/viewLocator",
       "durandal/system"
@@ -31,7 +25,6 @@
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout",
       "jquery": "../vendor/jquery/jquery",
-      "bootstrap": "../vendor/bootstrap/bootstrap",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
       "transitions": "../vendor/durandal/transitions"
@@ -44,19 +37,11 @@
     "/javascripts/app/main.js": null
   },
   "originalConfig": {
-    "shim": {
-      "bootstrap": {
-        "deps": [
-          "jquery"
-        ],
-        "exports": "jQuery"
-      }
-    },
+    "shim": {},
     "paths": {
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout",
       "jquery": "../vendor/jquery/jquery",
-      "bootstrap": "../vendor/bootstrap/bootstrap",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
       "transitions": "../vendor/durandal/transitions"
