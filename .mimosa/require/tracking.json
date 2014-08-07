@@ -11,6 +11,7 @@
   },
   "deps": {
     "/javascripts/app/main.js": [
+      "require",
       "durandal/app",
       "durandal/viewLocator",
       "durandal/system"
