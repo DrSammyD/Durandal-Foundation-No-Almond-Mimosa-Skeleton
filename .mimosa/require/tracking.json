@@ -1,14 +1,6 @@
 {
-  "shims": {
-    "/javascripts/app/main.js": {}
-  },
+  "shims": {},
   "deps": {
-    "/javascripts/app/main.js": [
-      "require",
-      "durandal/app",
-      "durandal/viewLocator",
-      "durandal/system"
-    ],
     "/javascripts/app/viewmodels/flickr.js": [
       "plugins/http",
       "durandal/app",
@@ -20,36 +12,9 @@
     ],
     "/javascripts/app/viewmodels/welcome.js": []
   },
-  "aliases": {
-    "/javascripts/app/main.js": {
-      "text": "../vendor/requirejs-text/text",
-      "knockout": "../vendor/knockout.js/knockout.debug",
-      "jquery": "../vendor/jquery/jquery",
-      "durandal": "../vendor/durandal",
-      "plugins": "../vendor/durandal/plugins",
-      "transitions": "../vendor/durandal/transitions",
-      "foundation": "../vendor/foundation/js"
-    }
-  },
-  "mappings": {
-    "/javascripts/app/main.js": null
-  },
-  "packages": {
-    "/javascripts/app/main.js": null
-  },
-  "originalConfig": {
-    "shim": {},
-    "paths": {
-      "text": "../vendor/requirejs-text/text",
-      "knockout": "../vendor/knockout.js/knockout.debug",
-      "jquery": "../vendor/jquery/jquery",
-      "durandal": "../vendor/durandal",
-      "plugins": "../vendor/durandal/plugins",
-      "transitions": "../vendor/durandal/transitions",
-      "foundation": "../vendor/foundation/js"
-    }
-  },
-  "requireFiles": [
-    "/javascripts/app/main.js"
-  ]
+  "aliases": {},
+  "mappings": {},
+  "packages": {},
+  "originalConfig": {},
+  "requireFiles": []
 }

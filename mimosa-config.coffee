@@ -57,6 +57,11 @@ exports.config =
         "modernizr":['modernizr.js']
         "jquery-placeholder":['jquery.placeholder.js']
         'toastr':['toastr.js','toastr.css']
+        "font-awesome": [
+          { font: "../../font" }
+          "css/font-awesome.css"
+          "css/font-awesome-ie7.css"
+        ]
   combine:
     folders: [
       {

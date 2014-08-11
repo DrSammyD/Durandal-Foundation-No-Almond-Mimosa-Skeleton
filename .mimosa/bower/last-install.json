@@ -2,7 +2,7 @@
   "name": "Durandal Mimosa Skeleton",
   "version": "2.0.0",
   "dependencies": {
-    "jquery": "~2.1.0",
+    "jquery": "2.1.1",
     "requirejs": "~2.1.8",
     "requirejs-text": "~2.0.3",
     "knockout.js": "~3.0.0",
@@ -18,13 +18,17 @@
     "toastr": "~2.0.1",
     "knockout-deferred-updates": "~3.0.0",
     "knockoutjs": "~3.0.0",
-    "Knockout.Hotkeys": "~1.0.1"
+    "Knockout.Hotkeys": "~1.0.1",
+    "components-font-awesome": "~4.1.0",
+    "font-awesome": "3.2.1"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"
   },
   "resolutions": {
     "knockout.js": "~3.0.0",
-    "jquery": "~2.1.0"
+    "jquery": "2.1.1",
+    "requirejs": "~2.1.11",
+    "fastclick": "~1.0.0"
   }
 }
