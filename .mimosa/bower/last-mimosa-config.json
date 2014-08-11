@@ -16,30 +16,79 @@
     "unknownMainFullCopy": false,
     "overridesArrays": {
       "knockout.js": [
-        "knockout.js",
-        "knockout-2.3.0.debug.js"
+        "knockout.debug.js"
+      ],
+      "foundation": [
+        "js/foundation"
+      ],
+      "knockout.punches": [
+        "knockout.punches.js"
+      ],
+      "knockout.deferred": [
+        "knockout.punches.js"
+      ],
+      "i18next": [
+        "i18next.amd.withJQuery.js"
+      ],
+      "modernizr": [
+        "modernizr.js"
+      ],
+      "jquery-placeholder": [
+        "jquery.placeholder.js"
+      ],
+      "toastr": [
+        "toastr.js",
+        "toastr.css"
       ]
     },
     "overridesObjects": {
       "durandal": {
-        "img": "../../images",
+        "img": "../../img",
         "js": "durandal",
         "css": "durandal"
+      },
+      "foundation": {
+        "scss": "foundation"
       }
     },
     "mainOverrides": {
       "knockout.js": [
-        "knockout.js",
-        "knockout-2.3.0.debug.js"
+        "knockout.debug.js"
       ],
       "durandal": [
         {
-          "img": "../../images",
+          "img": "../../img",
           "js": "durandal",
           "css": "durandal"
         }
+      ],
+      "foundation": [
+        "js/foundation",
+        {
+          "scss": "foundation"
+        }
+      ],
+      "knockout.punches": [
+        "knockout.punches.js"
+      ],
+      "knockout.deferred": [
+        "knockout.punches.js"
+      ],
+      "i18next": [
+        "i18next.amd.withJQuery.js"
+      ],
+      "modernizr": [
+        "modernizr.js"
+      ],
+      "jquery-placeholder": [
+        "jquery.placeholder.js"
+      ],
+      "toastr": [
+        "toastr.js",
+        "toastr.css"
       ]
     },
     "pathMod": null
-  }
+  },
+  "trackChange": true
 }

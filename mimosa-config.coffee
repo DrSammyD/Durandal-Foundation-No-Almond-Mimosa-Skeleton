@@ -25,7 +25,7 @@ exports.config =
   sass:
     lib: require('node-sass')
     extensions: ["sass", "scss"]
-    includePaths: ['bower_components/foundation/scss']
+    includePaths: ['stylesheets/vendor/foundation/scss']
 
   requireBuildTextPluginInclude:
     pluginPath: 'text'
@@ -36,18 +36,27 @@ exports.config =
     patterns: ['app/**/*.js', 'vendor/durandal/**/*.js']
 
   bower:
+    trackChange: true
     copy:
       mainOverrides:
-        "knockout.js":["knockout.js","knockout-2.3.0.debug.js"]
-        
+        "knockout.js":["knockout.debug.js"]
         "durandal": [
           {
-            img: "../../images"
+            img: "../../img"
             js: "durandal"
             css: "durandal"
           }
         ]
-
+        "foundation":[          
+            "js/foundation"
+            scss: "foundation"
+        ]
+        "knockout.punches":['knockout.punches.js']
+        "knockout.deferred":['knockout.punches.js']
+        "i18next":['i18next.amd.withJQuery.js'],
+        "modernizr":['modernizr.js']
+        "jquery-placeholder":['jquery.placeholder.js']
+        'toastr':['toastr.js','toastr.css']
   combine:
     folders: [
       {
@@ -74,3 +83,9 @@ exports.config =
         stubModules: ['text']
         pragmas:
           build: true
+
+  csslint:
+    exclude:[
+      'stylesheets/site.scss'
+      'stylesheets/starterkit.css'
+   ]

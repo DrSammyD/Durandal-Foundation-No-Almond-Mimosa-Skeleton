@@ -23,11 +23,12 @@
   "aliases": {
     "/javascripts/app/main.js": {
       "text": "../vendor/requirejs-text/text",
-      "knockout": "../vendor/knockout.js/knockout",
+      "knockout": "../vendor/knockout.js/knockout.debug",
       "jquery": "../vendor/jquery/jquery",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
-      "transitions": "../vendor/durandal/transitions"
+      "transitions": "../vendor/durandal/transitions",
+      "foundation": "../vendor/foundation/js"
     }
   },
   "mappings": {
@@ -40,11 +41,12 @@
     "shim": {},
     "paths": {
       "text": "../vendor/requirejs-text/text",
-      "knockout": "../vendor/knockout.js/knockout",
+      "knockout": "../vendor/knockout.js/knockout.debug",
       "jquery": "../vendor/jquery/jquery",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
-      "transitions": "../vendor/durandal/transitions"
+      "transitions": "../vendor/durandal/transitions",
+      "foundation": "../vendor/foundation/js"
     }
   },
   "requireFiles": [

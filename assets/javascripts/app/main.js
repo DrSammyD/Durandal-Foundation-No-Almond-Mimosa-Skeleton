@@ -1,23 +1,23 @@
 requirejs.config({
     paths: {
         'text': '../vendor/requirejs-text/text',
-        'knockout': '../vendor/knockout.js/knockout',
+        'knockout': '../vendor/knockout.js/knockout.debug',
+        'ko-deferred': '../vendor/knockout-deferred-updates/knockout.debug',
         'jquery': '../vendor/jquery/jquery',
+        'jquery': '../vendor/toastr/toastr',
         'durandal':'../vendor/durandal',
         'plugins' : '../vendor/durandal/plugins',
-        'transitions' : '../vendor/durandal/transitions'
+        'transitions' : '../vendor/durandal/transitions',
+        'foundation' : '../vendor/foundation/js'
     },
     shim: {
     }
 });
 
-define(function(require) {
-    var app = require('durandal/app'),
-        viewLocator = require('durandal/viewLocator'),
-        system = require('durandal/system');
+define(['durandal/app','durandal/viewLocator','durandal/system'],function(app, viewLocator, system) {
 
     //>>excludeStart("build", true);
-    system.debug(true);
+    system.debug(false);
     //>>excludeEnd("build");
 
     app.title = 'Durandal Starter Kit';
