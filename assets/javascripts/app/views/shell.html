@@ -8,10 +8,10 @@
         </ul>
         <section class="top-bar-section">
             <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-                <i class="icon-home"></i>
-                <span>Durandal</span>
+                <i class="fa fa-btc"></i>
+                <span>Bitcadia</span>
             </a>
-            <ul class="right" data-bind="foreach: router.navigationModel">
+            <ul class="right" data-bind="foreach: router.navigationModel()">
                 <li data-bind="css: { active: isActive }">
                     <a data-bind="attr: { href: hash }, html: title"></a>
                 </li>

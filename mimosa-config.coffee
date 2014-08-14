@@ -83,7 +83,6 @@ exports.config =
   require:
     optimize:
       overrides:
-        name: '../vendor/almond-custom'
         inlineText: true
         stubModules: ['text']
         pragmas:
