@@ -1,1 +1,1 @@
-define(['ko-punches','ko-deferred','ko-hotkeys'],function(){});
+define(['ko-punches','ko-deferred','ko-hotkeys','kodash','ko-t'],function(){});

@@ -1,5 +1,5 @@
 {
-  "name": "durandal-node-server",
+  "name": "durandal-foundation-node-server",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

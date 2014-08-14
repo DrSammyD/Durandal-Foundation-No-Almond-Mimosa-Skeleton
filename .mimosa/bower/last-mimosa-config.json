@@ -56,6 +56,12 @@
       },
       "font-awesome": {
         "font": "../../font"
+      },
+      "lodash": {
+        "dist": "lodash"
+      },
+      "bootstrap-datepicker": {
+        "js": "bootstrap-datepicker"
       }
     },
     "mainOverrides": {
@@ -100,6 +106,16 @@
         },
         "css/font-awesome.css",
         "css/font-awesome-ie7.css"
+      ],
+      "lodash": [
+        {
+          "dist": "lodash"
+        }
+      ],
+      "bootstrap-datepicker": [
+        {
+          "js": "bootstrap-datepicker"
+        }
       ]
     },
     "pathMod": null

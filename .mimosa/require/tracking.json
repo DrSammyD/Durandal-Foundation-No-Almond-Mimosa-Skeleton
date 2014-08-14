@@ -1,21 +1,41 @@
 {
   "shims": {
     "/javascripts/app/main.js": {
-      "koplugins": "knockout"
+      "koplugins": "knockout",
+      "jqplugins": "jquery"
     }
   },
   "deps": {
+    "/javascripts/app/current-locale.js": [
+      "knockout",
+      "jquery",
+      "moment",
+      "text!locale/supported.json",
+      "i18next",
+      "datepicker"
+    ],
+    "/javascripts/app/jqplugins.js": [
+      "i18next"
+    ],
+    "/javascripts/app/ko-t.js": [
+      "knockout",
+      "jquery",
+      "current-locale"
+    ],
     "/javascripts/app/koplugins.js": [
       "ko-punches",
       "ko-deferred",
-      "ko-hotkeys"
+      "ko-hotkeys",
+      "kodash",
+      "ko-t"
     ],
     "/javascripts/app/main.js": [
       "durandal/app",
       "durandal/viewLocator",
       "durandal/system",
       "knockout",
-      "koplugins"
+      "koplugins",
+      "jqplugins"
     ],
     "/javascripts/app/viewmodels/flickr.js": [
       "plugins/http",
@@ -35,12 +55,19 @@
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",
       "ko-punches": "../vendor/knockout.punches/knockout.punches",
       "ko-hotkeys": "../vendor/Knockout.Hotkeys/knockout.hotkeys",
+      "kodash": "../vendor/kodash/kodash",
+      "lodash": "../vendor/lodash/lodash",
       "jquery": "../vendor/jquery/jquery",
+      "moment": "../vendor/moment/moment",
+      "numeral": "../vendor/numeral/numeral",
+      "i18next": "../vendor/i18next/i18next.amd.withJQuery",
       "toastr": "../vendor/toastr/toastr",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
       "transitions": "../vendor/durandal/transitions",
-      "foundation": "../vendor/foundation"
+      "foundation": "../vendor/foundation",
+      "datepicker": "../vendor/bootstrap-datepicker/bootstrap-datepicker",
+      "q": "../vendoor/q/q"
     }
   },
   "mappings": {
@@ -51,7 +78,8 @@
   },
   "originalConfig": {
     "shim": {
-      "koplugins": "knockout"
+      "koplugins": "knockout",
+      "jqplugins": "jquery"
     },
     "paths": {
       "text": "../vendor/requirejs-text/text",
@@ -59,15 +87,23 @@
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",
       "ko-punches": "../vendor/knockout.punches/knockout.punches",
       "ko-hotkeys": "../vendor/Knockout.Hotkeys/knockout.hotkeys",
+      "kodash": "../vendor/kodash/kodash",
+      "lodash": "../vendor/lodash/lodash",
       "jquery": "../vendor/jquery/jquery",
       "toastr": "../vendor/toastr/toastr",
       "durandal": "../vendor/durandal",
       "plugins": "../vendor/durandal/plugins",
       "transitions": "../vendor/durandal/transitions",
-      "foundation": "../vendor/foundation"
+      "foundation": "../vendor/foundation",
+      "moment": "../vendor/moment/moment",
+      "i18next": "../vendor/i18next/i18next.amd.withJQuery",
+      "numeral": "../vendor/numeral/numeral",
+      "datepicker": "../vendor/bootstrap-datepicker/bootstrap-datepicker",
+      "q": "../vendoor/q/q"
     }
   },
   "requireFiles": [
+    "/javascripts/app/current-locale.js",
     "/javascripts/app/main.js"
   ]
 }

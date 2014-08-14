@@ -1,6 +1,6 @@
 ﻿define(function() {
     var ctor = function () {
-        this.displayName = 'Welcome to the Durandal Starter Kit!';
+        this.displayName = 'Welcome to Durandal!';
         this.description = 'Durandal is a cross-device, cross-platform client framework written in JavaScript and designed to make Single Page Applications (SPAs) easy to create and maintain.';
         this.features = [
             'Clean MV* Architecture',
@@ -12,8 +12,8 @@
             'App Bundling and Optimization',
             'Use any Backend Technology',
             'Built on top of jQuery, Knockout & RequireJS',
-            'Integrates with other libraries such as SammyJS & Bootstrap',
-            'Make jQuery & Bootstrap widgets templatable and bindable (or build your own widgets).'
+            'Integrates with other libraries such as SammyJS & Foundation',
+            'Make jQuery & Foundation widgets templatable and bindable (or build your own widgets).'
         ];
     };
 

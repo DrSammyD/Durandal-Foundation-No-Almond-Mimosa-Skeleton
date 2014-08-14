@@ -62,6 +62,12 @@ exports.config =
           "css/font-awesome.css"
           "css/font-awesome-ie7.css"
         ]
+        "lodash":[
+          'dist':'lodash'
+        ]
+        "bootstrap-datepicker":[
+          'js':'bootstrap-datepicker'
+        ]
   combine:
     folders: [
       {

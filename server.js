@@ -35,7 +35,7 @@ exports.startServer = function(config, callback) {
   }
 
   var routeOptions = {
-    reload:    false,
+    reload:    true,
     optimize:  config.isOptimize != null ? config.isOptimize : false,
     cachebust: cachebust
   };
