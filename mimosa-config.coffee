@@ -88,9 +88,12 @@ exports.config =
 
   require:
     optimize:
+      inferConfig:true 
       overrides:
+        name: '../vendor/almond-custom'
         inlineText: true
         stubModules: ['text']
+        mainConfigFile:'public/javascripts/app/ref.js'
         pragmas:
           build: true
 

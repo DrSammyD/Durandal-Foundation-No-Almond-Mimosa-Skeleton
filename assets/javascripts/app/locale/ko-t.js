@@ -1,4 +1,4 @@
-define(['knockout','jquery','current-locale'],function (ko, $,locale) {
+define(['knockout','jquery','locale/current-locale'],function (ko, $,locale) {
     ko['t'] = function(key, options) {
         return ko.computed(function() {
             locale();
