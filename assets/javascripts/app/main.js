@@ -1,8 +1,9 @@
-define(['durandal/app','durandal/viewLocator','durandal/system','knockout','koplugs','jqplugs'],function(app, viewLocator, system, ko) {
+define(['durandal/app','durandal/viewLocator','durandal/system','knockout','koplugs','jqplugs', 'viewmodels/shell'],function(app, viewLocator, system, ko) {
 
     //>>excludeStart("build", true);
     system.debug(false);
     //>>excludeEnd("build");
+    require({baseUrl:'./javascripts/app'})
     ko.punches.enableAll();
     app.title = 'Bitcadia';
 

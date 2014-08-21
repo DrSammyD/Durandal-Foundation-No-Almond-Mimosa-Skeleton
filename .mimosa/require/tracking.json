@@ -1,5 +1,6 @@
 {
   "shims": {
+    "/javascripts/app/main.js": null,
     "/javascripts/app/ref.js": {
       "koplugs": "knockout",
       "jqplugs": "jquery"
@@ -35,7 +36,8 @@
       "durandal/system",
       "knockout",
       "koplugs",
-      "jqplugs"
+      "jqplugs",
+      "viewmodels/shell"
     ],
     "/javascripts/app/ref.js": [],
     "/javascripts/app/viewmodels/flickr.js": [
@@ -50,8 +52,8 @@
     "/javascripts/app/viewmodels/welcome.js": []
   },
   "aliases": {
+    "/javascripts/app/main.js": null,
     "/javascripts/app/ref.js": {
-      "ublic": "../../",
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout.debug",
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",
@@ -73,9 +75,11 @@
     }
   },
   "mappings": {
+    "/javascripts/app/main.js": null,
     "/javascripts/app/ref.js": null
   },
   "packages": {
+    "/javascripts/app/main.js": null,
     "/javascripts/app/ref.js": null
   },
   "originalConfig": {
@@ -84,7 +88,6 @@
       "jqplugs": "jquery"
     },
     "paths": {
-      "ublic": "../../",
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout.debug",
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",
@@ -107,6 +110,7 @@
   },
   "requireFiles": [
     "/javascripts/app/locale/current-locale.js",
+    "/javascripts/app/main.js",
     "/javascripts/app/ref.js"
   ]
 }

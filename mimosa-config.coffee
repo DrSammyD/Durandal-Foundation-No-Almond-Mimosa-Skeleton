@@ -81,24 +81,17 @@ exports.config =
     ]
   require:
     optimize:
-      inferConfig:false 
-      overrides:
-        name:'main'
-        include: ['main']
-        insertRequire: ['main']
-        out: './public/javascripts/app/main-built.js'
-        optimize:'uglify2'
-        baseUrl:'./public/javascripts/app'
-        mainConfigFile:'./public/javascripts/app/ref.js'
-        skipDirOptimize: true
-        generateSourceMaps: true
-        preserveLicenseComments:false
-        pragmas:
-          build: true
-        paths:{
-          requireLib:'../vendor/requirejs/require'
-        }
-        include:['requireLib']
+      inferConfig:true 
+      overrides: (infered)->
+        infered.optimize = "none"
+        infered.mainConfigFile='./public/javascripts/app/ref.js'
+        infered.name='main'
+        infered.include=['requireLib', 'main']
+        infered.insertRequire=['main']
+        infered.paths ={'requireLib':'../vendor/requirejs/require'}
+        infered.baseUrl= process.cwd()+'/public/javascripts/app'
+        infered.out= process.cwd()+'/public/javascripts/app/main-built.js'
+        return infered
   server:
     path: "server.js"
     views:
