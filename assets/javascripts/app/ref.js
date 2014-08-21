@@ -1,5 +1,7 @@
 requirejs.config({
+    baseUrl: './javascripts/app',
     paths: {
+        'ublic':'../../',
         'text': '../vendor/requirejs-text/text',
         'knockout': '../vendor/knockout.js/knockout.debug',
         'ko-deferred': '../vendor/knockout-deferred-updates/knockout-deferred-updates',

@@ -51,6 +51,7 @@
   },
   "aliases": {
     "/javascripts/app/ref.js": {
+      "ublic": "../../",
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout.debug",
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",
@@ -79,12 +80,11 @@
   },
   "originalConfig": {
     "shim": {
-      "koplugins": "knockout",
-      "jqplugins": "jquery",
       "koplugs": "knockout",
       "jqplugs": "jquery"
     },
     "paths": {
+      "ublic": "../../",
       "text": "../vendor/requirejs-text/text",
       "knockout": "../vendor/knockout.js/knockout.debug",
       "ko-deferred": "../vendor/knockout-deferred-updates/knockout-deferred-updates",

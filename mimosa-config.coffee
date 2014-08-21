@@ -79,23 +79,33 @@ exports.config =
         ]
       }
     ]
-
+  require:
+    optimize:
+      inferConfig:false 
+      overrides:
+        name:'main'
+        include: ['main']
+        insertRequire: ['main']
+        out: './public/javascripts/app/main-built.js'
+        optimize:'uglify2'
+        baseUrl:'./public/javascripts/app'
+        mainConfigFile:'./public/javascripts/app/ref.js'
+        skipDirOptimize: true
+        generateSourceMaps: true
+        preserveLicenseComments:false
+        pragmas:
+          build: true
+        paths:{
+          requireLib:'../vendor/requirejs/require'
+        }
+        include:['requireLib']
   server:
     path: "server.js"
     views:
+      name: 'main'
+      optimize:'uglify2'
       compileWith: 'handlebars'
       extension: 'hbs'
-
-  require:
-    optimize:
-      inferConfig:true 
-      overrides:
-        name: '../vendor/almond-custom'
-        inlineText: true
-        stubModules: ['text']
-        mainConfigFile:'public/javascripts/app/ref.js'
-        pragmas:
-          build: true
 
   csslint:
     exclude:[
