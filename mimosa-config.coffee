@@ -83,7 +83,6 @@ exports.config =
     optimize:
       inferConfig:true 
       overrides: (infered)->
-        infered.optimize = "none"
         infered.mainConfigFile='./public/javascripts/app/ref.js'
         infered.name='main'
         infered.include=['requireLib', 'main']
