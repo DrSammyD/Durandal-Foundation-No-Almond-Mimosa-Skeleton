@@ -5,7 +5,7 @@ define(['durandal/app','durandal/viewLocator','durandal/system','knockout','kopl
     //>>excludeEnd("build");
     require({baseUrl:'./javascripts/app'})
     ko.punches.enableAll();
-    app.title = 'Bitcadia';
+    app.title = 'Durandal';
 
 
     app.configurePlugins({
