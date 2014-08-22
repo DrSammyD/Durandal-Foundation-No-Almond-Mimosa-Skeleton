@@ -50,5 +50,6 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
         },
         fallbackLng: 'en'
     });
+    locale($.i18n.lng());
     return locale;
 });
