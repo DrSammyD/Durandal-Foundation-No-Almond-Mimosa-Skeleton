@@ -1,3 +1,4 @@
+path = require('path')
 exports.config =
 
   minMimosaVersion:'2.0.0'
@@ -88,8 +89,8 @@ exports.config =
         infered.include=['requireLib', 'main']
         infered.insertRequire=['main']
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
-        infered.baseUrl= process.cwd()+'/public/javascripts/app'
-        infered.out= process.cwd()+'/public/javascripts/app/main-built.js'
+        infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
+        infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
         console.log(JSON.stringify(infered))
         return infered
   server:
