@@ -68,6 +68,10 @@ exports.config =
         ]
         "bootstrap-datepicker":[
           'js':'bootstrap-datepicker'
+        ],
+        "moment":[
+          "locale/":"moment/locale/"
+          "moment.js"
         ]
   combine:
     folders: [

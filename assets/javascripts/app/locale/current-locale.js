@@ -1,17 +1,18 @@
 define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next','datepicker'], function (ko, $, moment, supportedLangs) {
+    supportedLangs= JSON.parse(supportedLangs);
     var locale = ko.observable($.i18n.lng());
     locale.equalityComparer = function(val1, val2) {
          return JSON.stringify(val1) == JSON.stringify(val2);
     };
     var setlng = $.i18n.setLng;
-    moment.lang($.i18n.lng());
+    moment.locale($.i18n.lng());
     $.i18n.setLng = function (lng, options, cb) {
         if (typeof options === 'function') {
             cb = options;
             options = {};
         }
         var othercb = function () {
-            moment.lang(lng);
+            moment.locale(lng);
             cb.apply(this, arguments);
             locale(lng);
         };
@@ -24,8 +25,9 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
         customLoad: function (lng, ns, cb, loadComplete) {
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);
-                moment.lang(lng);
+                moment.locale(lng);
                 if (!$.fn.datepicker.dates[lng]) {
+                    jsData.datepicker = jsData.datepicker || {};
                     jsData.datepicker["months"] = moment.months();
                     jsData.datepicker["monthsShort"] = moment.monthsShort();
                     jsData.datepicker["days"] = moment.weekdays();
@@ -35,13 +37,16 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
                 }
                 loadComplete(null, jsData[ns] || jsData);
             };
-            lng = (supportedLangs.indexOf(lng) != -1) ?
+            lng = (supportedLangs.base.indexOf(lng) != -1) ?
                 lng :
-                (supportedLangs.indexOf(lng.split('-')[0]) != -1) ?
+                (supportedLangs.base.indexOf(lng.split('-')[0]) != -1) ?
                     lng.split('-')[0] :
                     'en';
+            deps=['text!locale/' + lng + '.json'];
 
-            require(['text!locale/' + lng + '.json'], loadcb);
+            if(supportedLangs.moment.indexOf(lng)!=-1)
+                deps.push('../vendor/moment/locale/'+lng);
+            require(deps, loadcb);
         },
         fallbackLng: 'en'
     });

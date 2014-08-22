@@ -1,20 +1,23 @@
-﻿define(function() {
+﻿define(['locale/current-locale','i18next'],function(locale,i18next) {
     var ctor = function () {
-        this.displayName = 'Welcome to Durandal!';
-        this.description = 'Durandal is a cross-device, cross-platform client framework written in JavaScript and designed to make Single Page Applications (SPAs) easy to create and maintain.';
+        this.displayName = 'Welcome.DisplayName';
+        this.description = 'Welcome.Description';
         this.features = [
-            'Clean MV* Architecture',
-            'JS & HTML Modularity',
-            'Simple App Lifecycle',
-            'Eventing, Modals, Message Boxes, etc.',
-            'Navigation & Screen State Management',
-            'Consistent Async Programming w/ Promises',
-            'App Bundling and Optimization',
-            'Use any Backend Technology',
-            'Built on top of jQuery, Knockout & RequireJS',
-            'Integrates with other libraries such as SammyJS & Foundation',
-            'Make jQuery & Foundation widgets templatable and bindable (or build your own widgets).'
+            'Welcome.Features.Clean',
+            'Welcome.Features.Modular',
+            'Welcome.Features.Lifecycle',
+            'Welcome.Features.Event',
+            'Welcome.Features.Navigation',
+            'Welcome.Features.Async',
+            'Welcome.Features.Optimization',
+            'Welcome.Features.Backend',
+            'Welcome.Features.Libraries',
+            'Welcome.Features.Integrates',
+            'Welcome.Features.Widgets'
         ];
+        this.switchLang=function(){
+            locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr")
+        };
     };
 
     //Note: This module exports a function. That means that you, the developer, can create multiple instances.
