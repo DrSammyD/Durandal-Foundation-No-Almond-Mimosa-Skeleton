@@ -90,6 +90,7 @@ exports.config =
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'
         infered.out= process.cwd()+'/public/javascripts/app/main-built.js'
+        console.log(JSON.stringify(infered))
         return infered
   server:
     path: "server.js"
