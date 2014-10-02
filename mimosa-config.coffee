@@ -3,9 +3,16 @@ exports.config =
 
   minMimosaVersion:'2.0.0'
 
+  amdify:
+    globals: {'fastclick':['FastClick'],'jquery':['jQuery','$'], 'lodash':['_'],'foundation':['Foundation'],'modernizr':['Modernizr']}
+    shim:
+      '../vendor/modernizr/modernizr.js':
+        export: ['Modernizr']
+
   modules: [
     'server'
     'require'
+    'amdify'
     'minify-js'
     'minify-css'
     'sass'

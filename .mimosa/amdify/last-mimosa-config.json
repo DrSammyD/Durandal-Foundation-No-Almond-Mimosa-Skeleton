@@ -1,0 +1,33 @@
+{
+  "path": "./assets/javascripts/app/",
+  "envVars": [
+    "browser",
+    "ecmaIdentifiers",
+    "reservedVars"
+  ],
+  "excludePaths": [
+    "../vendor/requirejs/require.js"
+  ],
+  "includePaths": [
+    "../vendor"
+  ],
+  "amdifyDir": {
+    "path": ".mimosa/amdify",
+    "clean": true
+  },
+  "globals": {
+    "FastClick": "fastclick",
+    "jQuery": "jquery",
+    "$": "jquery",
+    "_": "lodash",
+    "Foundation": "foundation",
+    "Modernizr": "modernizr"
+  },
+  "shim": {
+    "../vendor/modernizr/modernizr.js": {
+      "export": [
+        "Modernizr"
+      ]
+    }
+  }
+}

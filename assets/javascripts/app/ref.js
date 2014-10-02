@@ -17,7 +17,8 @@ requirejs.config({
         'transitions' : '../vendor/durandal/transitions',
         'foundation' : '../vendor/foundation',
         'datepicker': '../vendor/bootstrap-datepicker/bootstrap-datepicker',
-        'q': '../vendor/q/q'
+        'q': '../vendor/q/q',
+        'foundation':'../vendor/foundation/foundation'
     },
     shim: {
         'koplugs': 'knockout',
