@@ -1,4 +1,4 @@
-﻿define(['locale/current-locale','i18next'],function(locale,i18next) {
+﻿define(['locale/current-locale','i18next','knockout'],function(locale,i18next, ko) {
     var ctor = function () {
         this.displayName = 'Welcome.DisplayName';
         this.description = 'Welcome.Description';
@@ -18,6 +18,7 @@
         this.switchLang=function(){
             locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr")
         };
+        this.date=ko.observable();
     };
 
     //Note: This module exports a function. That means that you, the developer, can create multiple instances.

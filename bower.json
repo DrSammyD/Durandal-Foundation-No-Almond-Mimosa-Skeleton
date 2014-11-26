@@ -25,7 +25,8 @@
     "lodash": "~2.4.1",
     "moment": "git://github.com/moment/moment.git#~2.8.1",
     "bootstrap-datepicker": "git://github.com/eternicode/bootstrap-datepicker.git#~1.3.0",
-    "numeral": "~1.5.3"
+    "numeral": "~1.5.3",
+    "selectize": "~0.11.0"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"
@@ -33,7 +34,6 @@
   "resolutions": {
     "knockout.js": "~3.0.0",
     "jquery": "2.1.1",
-    "fastclick": "~1.0.0",
-    "requirejs": "~2.1.11"
+    "fastclick": "~1.0.0"
   }
 }

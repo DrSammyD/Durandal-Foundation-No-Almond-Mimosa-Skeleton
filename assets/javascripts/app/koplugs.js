@@ -1,1 +1,1 @@
-define(['ko-punches','ko-deferred','ko-hotkeys','kodash','locale/ko-t'],function(){});
+define(['ko-punches','ko-deferred','ko-hotkeys','kodash','locale/ko-t','customBindings'],function(){});

@@ -2,6 +2,8 @@ path = require('path')
 exports.config =
 
   minMimosaVersion:'2.0.0'
+  liveReload:
+    enabled:true
 
   modules: [
     'server'
@@ -16,6 +18,7 @@ exports.config =
     'requirebuild-include'
     'requirebuild-textplugin-include'
     'bower'
+    'require-commonjs'
     'web-package'
     'copy'
   ]
@@ -27,7 +30,7 @@ exports.config =
     lib: require('node-sass')
     extensions: ["sass", "scss"]
     includePaths: ['stylesheets/vendor/foundation/scss']
-
+    
   requireBuildTextPluginInclude:
     pluginPath: 'text'
     extensions: ['html']
@@ -96,6 +99,7 @@ exports.config =
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
         infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
         return infered
+
   server:
     path: "server.js"
     views:
