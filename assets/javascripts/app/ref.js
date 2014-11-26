@@ -20,7 +20,7 @@ requirejs.config({
         'sifter': '../vendor/sifter/sifter',
         'text': '../vendor/requirejs-text/text',
         'toastr': '../vendor/toastr/toastr',
-        'transitions' : '../vendor/durandal/transitions'
+        'q': '../vendor/q/q'
     },
     shim: {
         'jquery':{exports:['jQuery']},

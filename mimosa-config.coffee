@@ -5,9 +5,16 @@ exports.config =
   liveReload:
     enabled:true
 
+  amdify:
+    globals: {'fastclick':['FastClick'],'jquery':['jQuery','$'], 'lodash':['_'],'foundation':['Foundation'],'modernizr':['Modernizr']}
+    shim:
+      '../vendor/modernizr/modernizr.js':
+        export: ['Modernizr']
+
   modules: [
     'server'
     'require'
+    'amdify'
     'minify-js'
     'minify-css'
     'sass'
