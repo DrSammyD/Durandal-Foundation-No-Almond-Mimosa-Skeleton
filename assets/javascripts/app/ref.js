@@ -2,7 +2,7 @@ requirejs.config({
     paths: {
         'datepicker': '../vendor/bootstrap-datepicker/bootstrap-datepicker',
         'durandal':'../vendor/durandal',
-        'foundation' : '../vendor/foundation',
+        'zurb' : '../vendor/foundation',
         'i18next':'../vendor/i18next/i18next.amd.withJQuery',
         'jquery': '../vendor/jquery/jquery',
         'knockout': '../vendor/knockout.js/knockout.debug',
@@ -20,12 +20,29 @@ requirejs.config({
         'sifter': '../vendor/sifter/sifter',
         'text': '../vendor/requirejs-text/text',
         'toastr': '../vendor/toastr/toastr',
-        'q': '../vendor/q/q'
+        'fastclick': '../vendor/fastclick/fastclick'
     },
     shim: {
-        'jquery':{exports:['jQuery']},
+        'jquery':{exports:['jQuery','$']},
         'koplugs': 'knockout',
         'jqplugs': 'jquery',
-        'datepicker':'jquery'
+        'datepicker':'jquery',
+        'fastclick':{exports:['FastClick']},
+        '../vendor/foundation/foundation':{exports:['Foundation'],deps:['jquery','fastclick']},
+        '../vendor/foundation/foundation.abide':'foundation',
+        '../vendor/foundation/foundation.accordion':'foundation',
+        '../vendor/foundation/foundation.alert':'foundation',
+        '../vendor/foundation/foundation.clearing':'foundation',
+        '../vendor/foundation/foundation.dropdown':'foundation',
+        '../vendor/foundation/foundation.equalizer':'foundation',
+        '../vendor/foundation/foundation.interchange':'foundation',
+        '../vendor/foundation/foundation.joyride':'foundation',
+        '../vendor/foundation/foundation.magellan':'foundation',
+        '../vendor/foundation/foundation.offcanvas':'foundation',
+        '../vendor/foundation/foundation.orbit':'foundation',
+        '../vendor/foundation/foundation.reveal':'foundation',
+        '../vendor/foundation/foundation.tab':'foundation',
+        '../vendor/foundation/foundation.tooltip':'foundation',
+        '../vendor/foundation/foundation.topbar':'foundation'
     }
 })(['main'],function(){});

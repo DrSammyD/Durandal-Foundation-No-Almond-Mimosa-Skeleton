@@ -14,7 +14,6 @@ exports.config =
   modules: [
     'server'
     'require'
-    'amdify'
     'minify-js'
     'minify-css'
     'sass'
