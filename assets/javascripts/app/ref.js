@@ -21,6 +21,7 @@ requirejs.config({
         'sifter': '../vendor/sifter/sifter',
         'text': '../vendor/requirejs-text/text',
         'toastr': '../vendor/toastr/toastr',
+        'transitions':'../vendor/durandal/transitions',
         'fastclick': '../vendor/fastclick/fastclick'
     },
     shim: {
@@ -29,28 +30,28 @@ requirejs.config({
         'jqplugs': 'jquery',
         'datepicker':'jquery',
         'fastclick':{exports:['FastClick']},
-        '../vendor/foundation/foundation':{exports:['Foundation'],deps:['jquery','fastclick']},
-        '../vendor/foundation/foundation.abide':'foundation',
-        '../vendor/foundation/foundation.accordion':'foundation',
-        '../vendor/foundation/foundation.alert':'foundation',
-        '../vendor/foundation/foundation.clearing':'foundation',
-        '../vendor/foundation/foundation.dropdown':'foundation',
-        '../vendor/foundation/foundation.equalizer':'foundation',
-        '../vendor/foundation/foundation.interchange':'foundation',
-        '../vendor/foundation/foundation.joyride':'foundation',
-        '../vendor/foundation/foundation.magellan':'foundation',
-        '../vendor/foundation/foundation.offcanvas':'foundation',
-        '../vendor/foundation/foundation.orbit':'foundation',
-        '../vendor/foundation/foundation.reveal':'foundation',
-        '../vendor/foundation/foundation.tab':'foundation',
-        '../vendor/foundation/foundation.tooltip':'foundation',
-        '../vendor/foundation/foundation.topbar':'foundation'
+        'zurb/foundation':{exports:'Foundation',deps:['jquery','fastclick']},
+        'zurb/foundation.abide':'zurb/foundation',
+        'zurb/foundation.accordion':'zurb/foundation',
+        'zurb/foundation.alert':'zurb/foundation',
+        'zurb/foundation.clearing':'zurb/foundation',
+        'zurb/foundation.dropdown':'zurb/foundation',
+        'zurb/foundation.equalizer':'zurb/foundation',
+        'zurb/foundation.interchange':'zurb/foundation',
+        'zurb/foundation.joyride':'zurb/foundation',
+        'zurb/foundation.magellan':'zurb/foundation',
+        'zurb/foundation.offcanvas':'zurb/foundation',
+        'zurb/foundation.orbit':'zurb/foundation',
+        'zurb/foundation.reveal':'zurb/foundation',
+        'zurb/foundation.tab':'zurb/foundation',
+        'zurb/foundation.tooltip':'zurb/foundation',
+        'zurb/foundation.topbar':'zurb/foundation'
     },
     map:{
         '*':{
             'knockout-es5':'koES5Mod',
             'underscore':'lodash'
         },
-        'koES5Mod':{'koES5Mod':'knockout-es5'}
+        'koES5Mod':{'knockout-es5':'knockout-es5'}
     }
 })(['main'],function(){});
