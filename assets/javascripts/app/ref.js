@@ -9,6 +9,7 @@ requirejs.config({
         'ko-deferred': '../vendor/knockout-deferred-updates/knockout-deferred-updates',
         'ko-hotkeys':'../vendor/Knockout.Hotkeys/knockout.hotkeys',
         'ko-punches': '../vendor/knockout.punches/knockout.punches',
+        'knockout-es5':'../vendor/knockout-es5/knockout-es5',
         'kodash':'../vendor/kodash/kodash',
         'lodash':'../vendor/lodash/lodash',
         'moment':'../vendor/moment/moment',
@@ -44,5 +45,12 @@ requirejs.config({
         '../vendor/foundation/foundation.tab':'foundation',
         '../vendor/foundation/foundation.tooltip':'foundation',
         '../vendor/foundation/foundation.topbar':'foundation'
+    },
+    map:{
+        '*':{
+            'knockout-es5':'koES5Mod',
+            'underscore':'lodash'
+        },
+        'koES5Mod':{'koES5Mod':'knockout-es5'}
     }
 })(['main'],function(){});

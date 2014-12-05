@@ -1,7 +1,7 @@
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['knockout','jquery','selectize'], factory);
+        define(['knockout','jquery','selectize','injectBinding'], factory);
     } else {
         factory(ko,$,selectize||$('<select>').selectize().data('selectize').constructor);
     }
@@ -13,26 +13,10 @@
             break;
     }
     
-    var inject_binding = function (allBindings, key, value) {
-        //https://github.com/knockout/knockout/pull/932#issuecomment-26547528
-        var has = allBindings.has;
-        var get = allBindings.get;
-        return {
-            has: function (bindingKey) {
-                return (bindingKey == key) || has.call(allBindings,bindingKey);
-            },
-            get: function (bindingKey) {
-                var binding = get.call(allBindings,bindingKey);
-                if (bindingKey == key) {
-                    binding = binding ? [].concat(binding, value) : value;
-                }
-                return binding;
-            }
-        };
-    }
+   
     var setOptionNodeSelectionState =function (optionNode, isSelected) {
-                optionNode.selected = isSelected;
-        } 
+        optionNode.selected = isSelected;
+    } 
     selectize.prototype.updateOriginalInput=function(){        
         var i, n, options, self = this;
  
@@ -70,7 +54,7 @@
         
     ko.bindingHandlers.selectizeOptions={
         init:function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-            $.extend(allBindingsAccessor, inject_binding(allBindingsAccessor,'optionsAfterRender',function(el){
+            $.extend(allBindingsAccessor, ko.injectBinding(allBindingsAccessor,'optionsAfterRender',function(el){
                 $(el).attr('value', el[ko.bindingHandlers.options[_key].slice(1)])
             }));
             var ret= ko.bindingHandlers.options.init(element,valueAccessor, allBindingsAccessor, viewModel, bindingContext);
@@ -94,7 +78,7 @@
     }
     ko.bindingHandlers.selectizeCaption = {
         update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-            $.extend(allBindingsAccessor, inject_binding(allBindingsAccessor, 'optionsCaption', valueAccessor()));
+            $.extend(allBindingsAccessor, ko.injectBinding(allBindingsAccessor, 'optionsCaption', valueAccessor()));
             $(element).data('selectize').settings.placeholder= ko.unwrap(valueAccessor());
             $(element).data('selectize').updatePlaceholder();
         }

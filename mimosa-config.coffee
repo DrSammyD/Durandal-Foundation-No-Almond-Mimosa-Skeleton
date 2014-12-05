@@ -78,6 +78,9 @@ exports.config =
         "bootstrap-datepicker":[
           'js':'bootstrap-datepicker'
         ],
+        "knockout-es5":[
+          'dist'
+        ]
         "moment":[
           "locale/":"moment/locale/"
           "moment.js"
