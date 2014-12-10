@@ -1,4 +1,4 @@
-define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next','datepicker'], function (ko, $, moment, supportedLangs) {
+define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next','datetimepicker'], function (ko, $, moment, supportedLangs) {
     supportedLangs= JSON.parse(supportedLangs);
     var locale = ko.observable($.i18n.lng());
     locale.equalityComparer = function(val1, val2) {
@@ -26,14 +26,14 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);
                 moment.locale(lng);
-                if (!$.fn.datepicker.dates[lng]) {
-                    jsData.datepicker = jsData.datepicker || {};
-                    jsData.datepicker["months"] = moment.months();
-                    jsData.datepicker["monthsShort"] = moment.monthsShort();
-                    jsData.datepicker["days"] = moment.weekdays();
-                    jsData.datepicker["daysShort"] = moment.weekdaysShort();
-                    jsData.datepicker["daysMin"] = moment.weekdaysMin();
-                    $.fn.datepicker.dates[lng] = jsData.datepicker;
+                if (!$.fn.datetimepicker.dates[lng]) {
+                    jsData.datetimepicker = jsData.datetimepicker || {};
+                    jsData.datetimepicker["months"] = moment.months();
+                    jsData.datetimepicker["monthsShort"] = moment.monthsShort();
+                    jsData.datetimepicker["days"] = moment.weekdays();
+                    jsData.datetimepicker["daysShort"] = moment.weekdaysShort();
+                    jsData.datetimepicker["daysMin"] = moment.weekdaysMin();
+                    $.fn.datetimepicker.dates[lng] = jsData.datetimepicker;
                 }
                 loadComplete(null, jsData[ns] || jsData);
             };

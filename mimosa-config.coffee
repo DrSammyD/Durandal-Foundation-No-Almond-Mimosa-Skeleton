@@ -49,7 +49,9 @@ exports.config =
     trackChange: true
     copy:
       mainOverrides:
-        "knockout.js":["knockout.debug.js"]
+        "knockout":[
+          "dist/knockout.debug.js"
+        ]
         "durandal": [
           {
             img: "../../img"
@@ -75,9 +77,9 @@ exports.config =
         "lodash":[
           'dist':'lodash'
         ]
-        "bootstrap-datepicker":[
-          'js':'bootstrap-datepicker'
-        ],
+        "smalot-bootstrap-datetimepicker":[
+          'js':'smalot-bootstrap-datetimepicker'
+        ]
         "knockout-es5":[
           'dist'
         ]
@@ -85,6 +87,8 @@ exports.config =
           "locale/":"moment/locale/"
           "moment.js"
         ]
+        "bootstrap":[]
+        "knockout.js":[]
   combine:
     folders: [
       {

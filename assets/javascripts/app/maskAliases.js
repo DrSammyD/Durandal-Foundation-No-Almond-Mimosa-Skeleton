@@ -98,6 +98,9 @@ define(['jquery', 'moment','numeral','mathRound10',
     $.extend($.inputmask.defaults.aliases['dd/mm/yyyy'], readWriteDateFuncs, {
         momentFormat: 'DD/MM/YYYY'
     });
+    $.extend($.inputmask.defaults.aliases['date'], readWriteDateFuncs, {
+        momentFormat: 'DD/MM/YYYY'
+    });
     $.extend($.inputmask.defaults.aliases['mm/dd/yyyy'], readWriteDateFuncs, {
         momentFormat: 'MM/DD/YYYY'
     });

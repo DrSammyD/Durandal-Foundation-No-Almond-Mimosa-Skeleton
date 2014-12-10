@@ -1,7 +1,7 @@
 define(['durandal/app','durandal/viewLocator','durandal/system','knockout','koplugs','jqplugs', 'viewmodels/shell','customSetup','zurb/foundation'],function(app, viewLocator, system, ko) {
 
     //>>excludeStart("build", true);
-    system.debug(false);
+    system.debug(true);
     //>>excludeEnd("build");
     require({baseUrl:'./javascripts/app'})
     ko.punches.enableAll();

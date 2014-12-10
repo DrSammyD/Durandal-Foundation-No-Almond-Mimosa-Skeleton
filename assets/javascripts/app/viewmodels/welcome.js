@@ -2,6 +2,7 @@
     var ctor = function () {
         this.displayName = 'Welcome.DisplayName';
         this.description = 'Welcome.Description';
+        this.date = 'Dates.date';
         this.features = [
             'Welcome.Features.Clean',
             'Welcome.Features.Modular',
@@ -16,9 +17,9 @@
             'Welcome.Features.Widgets'
         ];
         this.switchLang=function(){
-            locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr")
+            locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr");
         };
-        this.date=ko.observable();
+
     };
 
     //Note: This module exports a function. That means that you, the developer, can create multiple instances.

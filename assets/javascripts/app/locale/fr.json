@@ -16,5 +16,8 @@
 			"Widgets":"Faire jQuery & Fondation Netvibes templatable et capable de se lier (ou construire vos propres widgets) "
 		},
 		"Lang":"Définir la langue"
+	},
+	"Dates":{
+		"date": "dd/mm/yyyy"
 	}
 }

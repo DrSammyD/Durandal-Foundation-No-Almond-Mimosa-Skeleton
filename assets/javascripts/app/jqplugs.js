@@ -1,4 +1,1 @@
-define(['i18next','datepicker'],function(i18,dp){
-    return $.fn.datepicker != false;
-    console.log($.fn.jquery);
-});
+define(['i18next','datetimepicker'],function(i18,dp){});

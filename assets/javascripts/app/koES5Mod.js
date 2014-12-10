@@ -2,7 +2,6 @@ define(['knockout', 'knockout-es5'], function(ko) {
     var vals=[];
     var o={};
     o.objs = [];
-    ko.track(o,['objs']);
     var goOrig = ko.getObservable;
     var getObservable = function(obj){
         if(arguments[1])

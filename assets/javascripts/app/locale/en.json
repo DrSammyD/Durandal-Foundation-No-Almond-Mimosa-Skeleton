@@ -16,5 +16,8 @@
 			"Widgets":"Make jQuery & Foundation widgets templatable and bindable (or build your own widgets)"
 		},
 		"Lang":"Set Language"
+	},
+	"Dates":{
+		"date": "mm/dd/yyyy"
 	}
 }
