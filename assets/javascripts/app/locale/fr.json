@@ -17,6 +17,9 @@
 		},
 		"Lang":"Définir la langue"
 	},
+	"Inputmask":{
+		"Dates":"Dates"
+		},
 	"Dates":{
 		"date": "dd/mm/yyyy"
 	}

@@ -17,6 +17,9 @@
 		},
 		"Lang":"Set Language"
 	},
+	"Inputmask":{
+		"Dates":"Dates"
+		},
 	"Dates":{
 		"date": "mm/dd/yyyy"
 	}

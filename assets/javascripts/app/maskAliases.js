@@ -12,7 +12,7 @@ define(['jquery', 'moment','numeral','mathRound10',
             offset:0,
             integerDigits:21,
             'onBeforePaste': function(input, inputValue, opts) {
-                return Math.round10(inputValue, -opts.digits);
+                return Math.round10(numeral(inputValue).value(), -opts.digits);
             },
             'read': function(input, inputValue, opts) {
                 return Math.round10(numeral(inputValue).value(), -opts.digits - opts.offset);
@@ -22,8 +22,10 @@ define(['jquery', 'moment','numeral','mathRound10',
             }
         });
 
+    var datetimeAmerican = $.extend({},$.inputmask.defaults.aliases['datetime']);
+    datetimeAmerican.alias='mm/dd/yyyy';
     $.extend($.inputmask.defaults.aliases, {
-        'percentage': {
+        'percentage':{
             'alias': 'numeric',
             'groupSeparator': ',',
             'autoGroup': true,
@@ -39,7 +41,7 @@ define(['jquery', 'moment','numeral','mathRound10',
             'alias': 'percentage',
             'offset':0,
             'read': function(input, inputValue, opts) {
-                return Math.round10(parseFloat(inputValue), -opts.digits);
+                return Math.round10(numeral(inputValue).value()*100, -opts.digits);
             }
         },
         'intSuffix':{
@@ -53,34 +55,29 @@ define(['jquery', 'moment','numeral','mathRound10',
         },
         'floatSuffix':{
             'alias': 'intSuffix',
-            'digitsOptional': false,
-            'digits': 4,
+            'digits': 2,
+            'digitsOptional':false,
             'placeholder': '0'
         },
-        'bbl':{
-            'alias': 'intSuffix',
-            'suffix': ' bbl '
-        },
-        'bbldecimal':{
+        'USD':{
             'alias': 'floatSuffix',
-            'suffix': ' bbl '
+            'suffix': ' USD'
         },
-        'datetimeAmerican': {
-            mask: "2/1/y h:s",
-            placeholder: "mm/dd/yyyy hh:mm",
-            alias: "datetime",
-            leapday: "02/29/"
+        'EUR':{
+            'alias': 'floatSuffix',
+            'suffix': ' EUR'
         },
-        'datetime12American': {
-            mask: "2/1/y h:s t\\m",
-            placeholder: "mm/dd/yyyy hh:mm xm",
-            alias: 'datetime12',
-            leapday: "02/29/"
+        'datetimeAmerican':datetimeAmerican,
+        'datetime12American':{
+            "mask": "1/2/y h:s t\\m",
+            "placeholder": "mm/dd/yyyy hh:mm xm",
+            "alias": "datetime12",
+            "leapday": "02/29/"
         }
     });
     var readWriteDateFuncs = {
         read: function(input, inputValue, opts) {
-            return moment(inputValue || null).toDate();
+            return moment(inputValue || null,opts.momentFormat).toDate();
         },
         write: function(input, inputValue, opts) {
             inputValue=moment(inputValue || null);
@@ -90,7 +87,7 @@ define(['jquery', 'moment','numeral','mathRound10',
     };
     
     $.extend($.inputmask.defaults.aliases['datetimeAmerican'], readWriteDateFuncs, {
-        momentFormat: 'MM/DD/YYYY hh:mm'
+        momentFormat: 'MM/DD/YYYY HH:mm'
     });
     $.extend($.inputmask.defaults.aliases['datetime12American'], readWriteDateFuncs, {
         momentFormat: 'MM/DD/YYYY hh:mm a'
@@ -138,10 +135,10 @@ define(['jquery', 'moment','numeral','mathRound10',
         momentFormat: 'h:s a'
     });
     $.extend($.inputmask.defaults.aliases['hh:mm:ss'], readWriteDateFuncs, {
-        momentFormat: 'hh:mm:ss'
+        momentFormat: 'HH:mm:ss'
     });
     $.extend($.inputmask.defaults.aliases['hh:mm'], readWriteDateFuncs, {
-        momentFormat: 'hh:mm'
+        momentFormat: 'HH:mm'
     });
     $.extend($.inputmask.defaults.aliases['mm/yyyy'], readWriteDateFuncs, {
         momentFormat: 'MM/YYYY'

@@ -38,7 +38,7 @@ define(['jquery', 'knockout',
                 var mask =  $el.data('virtualInput').data()._inputmask.opts;
                 var alias = maskOptions.alias || maskOptions;
                 delete maskOptions.alias;
-                return ko.utils.extend(ko.utils.extend({}, defaultMask), masks[alias] || {});
+                return ko.utils.extend(ko.utils.extend({}, defaultMask), mask);
             });
             ko.utils.extend(
                 allBindingsAccessor,
@@ -62,6 +62,7 @@ define(['jquery', 'knockout',
                 $el.closest('form').on('submit', function() {
                     $el.triggerHandler('mouseenter');
                 });
+                $el.on('focus',function(){$el.val($el.val());});
 
                 createMaskObservable($el, allBindingsAccessor);
 
@@ -119,7 +120,7 @@ define(['jquery', 'knockout',
             update: function(element,valueAccessor,allBindingsAccessor,viewModel,bindingContext){
                 var $el = $(element);
                 var mask = ko.unwrap(allBindingsAccessor.get('virtualMask'));
-                $el.inputmask(mask);
+                $el.inputmask(mask);                
                 allBindingsAccessor.get('currentMask')(mask);
             },
             replace: [{
