@@ -1,1 +1,1 @@
-define(['knockout-es5','ko-punches','ko-hotkeys','kodash','locale/ko-t','customBindings','maskBinding'],function(){});
+define(['knockout-es5','ko-deferred','ko-punches','ko-hotkeys','kodash','locale/ko-t','customBindings','maskBinding'],function(){});

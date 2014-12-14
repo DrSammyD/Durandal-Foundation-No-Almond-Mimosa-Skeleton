@@ -23,13 +23,17 @@ requirejs.config({
         'text': '../vendor/requirejs-text/text',
         'toastr': '../vendor/toastr/toastr',
         'transitions':'../vendor/durandal/transitions',
-        'fastclick': '../vendor/fastclick/fastclick'
+        'fastclick': '../vendor/fastclick/fastclick',
+        'velocity': '../vendor/velocity/velocity',
+        'velocity-ui': '../vendor/velocity/velocity.ui'
     },
     shim: {
         'jquery':{exports:['jQuery','$']},
         'koplugs': 'knockout',
         'jqplugs': 'jquery',
         'datetimepicker':'jquery',
+        'velocity':'jquery',
+        'velocity-ui':'velocity',
         'fastclick':{exports:['FastClick']},
         'zurb/foundation':{exports:'Foundation',deps:['jquery','fastclick']},
         'zurb/foundation.abide':'zurb/foundation',

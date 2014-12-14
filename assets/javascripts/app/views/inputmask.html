@@ -1,12 +1,12 @@
 ﻿<div>
     <h1>{{ko.t('Inputmask.Dates')}}</h1>
     <dl class="tabs">
-      <dd class="tab-title"><a data-bind="click: function(){setTab('dates');}">Dates</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){setTab('numbers');}">Numbers</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){setTab('i18n');}">i18n</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='dates';}">Dates</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='numbers';}">Numbers</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='i18n';}">i18n</a></dd>
     </dl>
     <div class="tabs-content">
-        <div class="content" data-bind="css.active: ko.go($data).tab()=='dates'" id="dates">
+        <div class="content" data-bind="css.active: tab=='dates'" id="dates">
             <ul class="small-block-grid-3">
                 <li>
                     <label>datetimeAmerican</label>

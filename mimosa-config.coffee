@@ -87,6 +87,10 @@ exports.config =
           "locale/":"moment/locale/"
           "moment.js"
         ]
+        "velocity":[
+          "velocity.js"
+          "velocity.ui.js"
+        ]
         "bootstrap":[]
         "knockout.js":[]
   combine:

@@ -1,4 +1,4 @@
-define(['jquery','knockout','maskBinding','jqplugs'],function($,ko){
+define(['jquery','knockout','plugins/router','durandal/composition','maskBinding','jqplugs'],function($,ko,rootRouter,composition){
     console.log($.fn.jquery);
         var dpglobal=$.fn.datetimepicker.DPGlobal;
         dpglobal.headTemplate= '<thead><tr><th class="fa fa-chevron-left "></th><th colspan="5" class="datepicker-switch"></th><th class="next">&raquo;</th></tr></thead>'
@@ -8,4 +8,35 @@ define(['jquery','knockout','maskBinding','jqplugs'],function($,ko){
         function(item) {
             ko.bindingHandlers.mask.register(item);
         });
+    rootRouter.install = function(){
+        var lastActiveItem=null;
+        ko.bindingHandlers.router = {
+            init: function() {
+                return { controlsDescendantBindings: true };
+            },
+            update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+                var settings = ko.utils.unwrapObservable(valueAccessor()) || {};
+
+                if (settings.__router__) {
+                    settings = {
+                        model:settings.activeItem(),
+                        attached:settings.attached,
+                        compositionComplete:settings.compositionComplete,
+                        activate: false
+                    };
+                } else {
+                    var theRouter = ko.utils.unwrapObservable(settings.router || viewModel.router) || rootRouter;
+                    settings.model = theRouter.activeItem();
+                    settings.attached = theRouter.attached;
+                    settings.compositionComplete = theRouter.compositionComplete;
+                    settings.activate = false;
+                }
+                if(lastActiveItem!=settings.model)
+                    composition.compose(element, settings, bindingContext);
+                lastActiveItem = settings.model;
+            }
+        };
+
+        ko.virtualElements.allowedBindings.router = true;
+    };
 })

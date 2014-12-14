@@ -72,26 +72,29 @@ define(['jquery', 'knockout',
                 $virtualInput=$el.data('virtualInput');
                 ko.utils.arrayForEach(bindingNames, function(bindingName) {
                     var valToUse, morphToUse;
+                    var getOrig = allBindingsAccessor.get;
                     var bindingToIntercept = allBindingsAccessor.get(bindingName);
                     if (bindingToIntercept) {
                         exact = 0;
                         ko.utils.arrayForEach(ko.bindingHandlers.mask.replace, function(item) {
                             stuff = (exact !== 1) &&
                                 (exact = runTest(item.test, bindingName)) &&
-                                (valToUse = item.valToUse(bindingName, bindingToIntercept),
+                                (valToUse = function(){return item.valToUse(bindingName, getOrig.call(allBindingsAccessor,bindingName) )},
                                     morphToUse = item.morph);
                         });
                     }
                     var read = function() {
                         var mask;
-                        $virtualInput.val((mask = ko.unwrap(allBindingsAccessor.get('currentMask'))).write(element, ko.unwrap(valToUse), mask)).triggerHandler('mouseenter');
+                        var val = valToUse();
+                        $virtualInput.val((mask = ko.unwrap(allBindingsAccessor.get('currentMask'))).write(element, ko.unwrap(val), mask)).triggerHandler('mouseenter');
                         return $virtualInput[0].value;
                     };
                     var write = function(newValue) {
                         var mask;
-                        if (ko.isWriteableObservable(valToUse)) {
+                        var val = valToUse();
+                        if (ko.isWriteableObservable(val)) {
                             newValue = (mask = ko.unwrap(allBindingsAccessor.get('currentMask'))).read(element, newValue, mask);
-                            valToUse(newValue);
+                            val(newValue);
                         }
                     };
 

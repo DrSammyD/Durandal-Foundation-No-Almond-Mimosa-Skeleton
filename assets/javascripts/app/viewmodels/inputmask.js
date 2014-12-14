@@ -28,6 +28,7 @@
         self['floatSuffix'] = 12;
         self['USD'] = 12;
         self['EUR'] = 12;
+        self['phone']= '2126549987';
         ko.track(self,[
             'tab',
             'datetimeAmerican',
@@ -54,7 +55,8 @@
             'intSuffix',
             'floatSuffix',
             'USD',
-            'EUR'
+            'EUR',
+            'phone'
             ]);
     };
     return vm;  
