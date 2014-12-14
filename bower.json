@@ -16,7 +16,7 @@
     "knockout-deferred-updates": "~3.2.1",
     "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git",
     "Knockout.Hotkeys": "~1.0.1",
-    "knockout.punches": "~0.3.0",
+    "knockout.punches": "~0.5.0",
     "kodash": "~1.0.3",
     "lodash": "~2.4.1",
     "modernizr": "~2.7.1",

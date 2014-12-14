@@ -1,4 +1,4 @@
-﻿define(['plugins/router', 'durandal/app'], function (router, app) {
+﻿define(['plugins/router', 'durandal/app','i18next','locale/current-locale'], function (router, app, i18next, locale) {
     return {
         router: router,
         search: function() {
@@ -13,6 +13,9 @@
             ]).buildNavigationModel();
             
             return router.activate();
+        },
+        switchLang:function(){
+            locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr");
         }
     };
 });

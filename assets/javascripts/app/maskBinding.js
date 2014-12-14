@@ -31,11 +31,12 @@ define(['jquery', 'knockout',
             return names;
         };
 
-        var createMaskObservable = function($el, allBindingsAccessor) {
+        var createMaskObservable = function($el, allBindingsAccessor, virtualInput) {
+            $virtualInput = $('<input></input>');
             var computed = ko.computed(function() {
                 var maskOptions = ko.unwrap(allBindingsAccessor.get('mask'));
-                $el.data('virtualInput').inputmask(maskOptions);
-                var mask =  $el.data('virtualInput').data()._inputmask.opts;
+                $virtualInput.inputmask(maskOptions);
+                var mask =  $virtualInput.data()._inputmask.opts;
                 var alias = maskOptions.alias || maskOptions;
                 delete maskOptions.alias;
                 return ko.utils.extend(ko.utils.extend({}, defaultMask), mask);
@@ -49,6 +50,12 @@ define(['jquery', 'knockout',
             ko.utils.extend(
                 allBindingsAccessor,
                 ko.utils.injectBinding(allBindingsAccessor,
+                    'virtualInput',
+                    $virtualInput)
+            );
+            ko.utils.extend(
+                allBindingsAccessor,
+                ko.utils.injectBinding(allBindingsAccessor,
                     'currentMask',
                     ko.observable(computed()))
             );
@@ -56,7 +63,6 @@ define(['jquery', 'knockout',
         ko.bindingHandlers.mask = {
             init: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
                 var $virtualInput, bindingNames, $el = $(element);
-                $el.data('virtualInput', (virtualInput = $('<input></input>')));
                 allBindingsAccessor.get = allBindingsAccessor.get || getFallback;
 
                 $el.closest('form').on('submit', function() {
@@ -69,7 +75,7 @@ define(['jquery', 'knockout',
                 var exact = 0;
                 var stuff;
                 bindingNames = getBindingNames(allBindingsAccessor);
-                $virtualInput=$el.data('virtualInput');
+                $virtualInput=allBindingsAccessor.get('virtualInput');
                 ko.utils.arrayForEach(bindingNames, function(bindingName) {
                     var valToUse, morphToUse;
                     var getOrig = allBindingsAccessor.get;
@@ -116,8 +122,7 @@ define(['jquery', 'knockout',
                 });
                 ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
                     $el.inputmask('remove');
-                    $el.data('virtualInput').inputmask('remove');
-                    $el.data('virtualInput', undefined);
+                    allBindingsAccessor.get('virtualInput').inputmask('remove');
                 });
             },
             update: function(element,valueAccessor,allBindingsAccessor,viewModel,bindingContext){

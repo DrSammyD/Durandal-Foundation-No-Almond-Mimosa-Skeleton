@@ -1,4 +1,7 @@
 {
+	"Shell":{
+		"Lang":"Set Language"
+		},
 	"Welcome":{
 		"DisplayName":"Welcome to Durandal!",
 		"Description":"Durandal is a cross-device, cross-platform client framework written in JavaScript and designed to make Single Page Applications (SPAs) easy to create and maintain.",
@@ -14,13 +17,16 @@
 			"Libraries":"Built on top of jQuery, Knockout & RequireJS",
 			"Integrates":"Integrates with other libraries such as SammyJS & Foundation",
 			"Widgets":"Make jQuery & Foundation widgets templatable and bindable (or build your own widgets)"
-		},
-		"Lang":"Set Language"
+		}
 	},
 	"Inputmask":{
-		"Dates":"Dates"
+		"Dates":"Dates",
+		"Numbers":"Numbers",
+		"i18n":"i18n",
+		"Title":"Input Masks"
 		},
 	"Dates":{
-		"date": "mm/dd/yyyy"
+		"date": "mm/dd/yyyy",
+		"datetime":"datetime12American"
 	}
 }

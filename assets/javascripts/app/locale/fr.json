@@ -1,4 +1,7 @@
 {
+	"Shell":{
+		"Lang":"Définir la langue"
+		},
 	"Welcome":{
 		"DisplayName":"Bienvenue à Durandal! ",
 		"Description":"Durandal est un cadre multi-appareils multi-plateforme client écrit en JavaScript et conçu pour rendre seule page Applications (ZPS) faciles à créer et à entretenir. ",
@@ -14,13 +17,16 @@
 			"Libraries":"Construit au-dessus de jQuery, Knockout et RequireJS ",
 			"Integrates":"Intégration avec d'autres bibliothèques comme SammyJS Fondation ",
 			"Widgets":"Faire jQuery & Fondation Netvibes templatable et capable de se lier (ou construire vos propres widgets) "
-		},
-		"Lang":"Définir la langue"
+		}
 	},
 	"Inputmask":{
-		"Dates":"Dates"
+		"Dates":"Dates",
+		"Numbers":"Nombres",
+		"i18n":"i18n",
+		"Title":"Masque de saisie"
 		},
 	"Dates":{
-		"date": "dd/mm/yyyy"
+		"date": "dd/mm/yyyy",
+		"datetime":"datetime12"
 	}
 }
