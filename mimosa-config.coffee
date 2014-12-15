@@ -52,6 +52,9 @@ exports.config =
         "knockout":[
           "dist/knockout.debug.js"
         ]
+        "knockout-es5":[
+          "dist/knockout-es5.js"
+        ]
         "durandal": [
           {
             img: "../../img"
@@ -115,6 +118,7 @@ exports.config =
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
         infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
+        infered.optimize = 'none'
         return infered
 
   server:

@@ -24,6 +24,7 @@ define(['jquery', 'moment','numeral','mathRound10',
 
     var datetimeAmerican = $.extend({},$.inputmask.defaults.aliases['datetime']);
     datetimeAmerican.alias='mm/dd/yyyy';
+    datetimeAmerican.placeholder="mm/dd/yyyy hh:mm";
     $.extend($.inputmask.defaults.aliases, {
         'percentage':{
             'alias': 'numeric',
@@ -68,12 +69,12 @@ define(['jquery', 'moment','numeral','mathRound10',
             'suffix': ' EUR'
         },
         'datetimeAmerican':datetimeAmerican,
-        'datetime12American':{
-            "mask": "1/2/y h:s t\\m",
-            "placeholder": "mm/dd/yyyy hh:mm xm",
-            "alias": "datetime12",
-            "leapday": "02/29/"
-        }
+        'datetime12American': {
+            mask: "1/2/y h:s t\\m",
+            placeholder: "mm/dd/yyyy hh:mm xm",
+            alias: "datetimeAmerican",
+            hourFormat: "12"
+        },
     });
     var readWriteDateFuncs = {
         read: function(input, inputValue, opts) {

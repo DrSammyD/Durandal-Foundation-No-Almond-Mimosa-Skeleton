@@ -1,35 +1,35 @@
 ﻿define(['plugins/http', 'durandal/app', 'knockout','moment', 'maskBinding','zurb/foundation.tab'], function (http, app, ko, moment) {
     var vm = function(){
-        var self = this;
-        self.tab = 'dates';
-        self.setTab=function(tab){self.tab=tab};
-        self['datetimeAmerican']=Date();
-        self['datetime12American']=Date();
-        self['dd/mm/yyyy']=Date();
-        self['date']=Date();
-        self['mm/dd/yyyy']=Date();
-        self['yyyy/mm/dd']=Date();
-        self['dd.mm.yyyy']=Date();
-        self['dd-mm-yyyy']=Date();
-        self['mm.dd.yyyy']=Date();
-        self['mm-dd-yyyy']=Date();
-        self['yyyy.mm.dd']=Date();
-        self['yyyy-mm-dd']=Date();
-        self['datetime']=Date();
-        self['datetime12']=Date();
-        self['hh:mm t']=Date();
-        self['h:s t']=Date();
-        self['hh:mm:ss']=Date();
-        self['hh:mm']=Date();
-        self['mm/yyyy']=Date();
-        self['percentage'] = 12;
-        self['percentageBase100'] = 12;
-        self['intSuffix'] = 12;
-        self['floatSuffix'] = 12;
-        self['USD'] = 12;
-        self['EUR'] = 12;
-        self['phone']= '2126549987';
-        ko.track(self,[
+        var that = this;
+        that.tab = 'dates';
+        that.setTab=function(tab){that.tab=tab};
+        that['datetimeAmerican']=Date();
+        that['datetime12American']=Date();
+        that['dd/mm/yyyy']=Date();
+        that['date']=Date();
+        that['mm/dd/yyyy']=Date();
+        that['yyyy/mm/dd']=Date();
+        that['dd.mm.yyyy']=Date();
+        that['dd-mm-yyyy']=Date();
+        that['mm.dd.yyyy']=Date();
+        that['mm-dd-yyyy']=Date();
+        that['yyyy.mm.dd']=Date();
+        that['yyyy-mm-dd']=Date();
+        that['datetime']=Date();
+        that['datetime12']=Date();
+        that['hh:mm t']=Date();
+        that['h:s t']=Date();
+        that['hh:mm:ss']=Date();
+        that['hh:mm']=Date();
+        that['mm/yyyy']=Date();
+        that['percentage'] = 12;
+        that['percentageBase100'] = 12;
+        that['intSuffix'] = 12;
+        that['floatSuffix'] = 12;
+        that['USD'] = 12;
+        that['EUR'] = 12;
+        that['phone']= '2126549987';
+        ko.track(that,[
             'tab',
             'datetimeAmerican',
             'datetime12American',

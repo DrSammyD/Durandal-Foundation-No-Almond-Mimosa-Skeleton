@@ -50,4 +50,5 @@ define(['knockout', 'knockout-es5'], function(ko) {
     ko.track = track;
     ko.go=getObservable;
     ko.getObservable=ko.go;
+    return ko;
 });

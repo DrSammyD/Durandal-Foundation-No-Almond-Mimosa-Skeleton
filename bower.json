@@ -8,13 +8,12 @@
     "font-awesome": "3.2.1",
     "foundation": "~5.1.1",
     "i18next": "~1.7.2",
-    "jquery": "2.1.1",
     "jquery-placeholder": "~2.0.7",
     "jquery.cookie": "~1.4.0",
     "jquery.inputmask": "3.1.38",
     "knockout": "~3.2.0",
     "knockout-deferred-updates": "~3.2.1",
-    "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git",
+    "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git#master",
     "Knockout.Hotkeys": "~1.0.1",
     "knockout.punches": "~0.5.0",
     "kodash": "~1.0.3",
@@ -29,13 +28,14 @@
     "selectize": "~0.11.0",
     "smalot-bootstrap-datetimepicker": "~2.3.1",
     "toastr": "~2.0.1",
-    "velocity": "~1.1.0"
+    "velocity": "~1.1.0",
+    "jquery": "~2.1.1"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"
   },
   "resolutions": {
-    "jquery": ">=1.7.0",
+    "jquery": "~2.1.1",
     "fastclick": "~1.0.0"
   }
 }
