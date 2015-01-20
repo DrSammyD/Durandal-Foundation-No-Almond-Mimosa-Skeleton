@@ -41,11 +41,12 @@ define(['jquery', 'knockout',
                 delete maskOptions.alias;
                 return ko.utils.extend(ko.utils.extend({}, defaultMask), mask);
             });
+            var composite= {virtualMask:computed,virtualInput:$virtualInput,currentMask:ko.observable(computed())};
             ko.utils.extend(
                 allBindingsAccessor,
                 ko.utils.injectBinding(allBindingsAccessor,
-                    'virtualMask',
-                    computed)
+                    'maskObs',
+                    composite)
             );
             ko.utils.extend(
                 allBindingsAccessor,
@@ -75,7 +76,7 @@ define(['jquery', 'knockout',
                 var exact = 0;
                 var stuff;
                 bindingNames = getBindingNames(allBindingsAccessor);
-                $virtualInput=allBindingsAccessor.get('virtualInput');
+                $virtualInput=allBindingsAccessor.get('maskObs').virtualInput;
                 ko.utils.arrayForEach(bindingNames, function(bindingName) {
                     var valToUse, morphToUse;
                     var getOrig = allBindingsAccessor.get;
@@ -92,14 +93,14 @@ define(['jquery', 'knockout',
                     var read = function() {
                         var mask;
                         var val = valToUse();
-                        $virtualInput.val((mask = ko.unwrap(allBindingsAccessor.get('currentMask'))).write(element, ko.unwrap(val), mask)).triggerHandler('mouseenter');
+                        $virtualInput.val((mask = ko.unwrap(allBindingsAccessor.get('maskObs').currentMask)).write(element, ko.unwrap(val), mask)).triggerHandler('mouseenter');
                         return $virtualInput[0].value;
                     };
                     var write = function(newValue) {
                         var mask;
                         var val = valToUse();
                         if (ko.isWriteableObservable(val)) {
-                            newValue = (mask = ko.unwrap(allBindingsAccessor.get('currentMask'))).read(element, newValue, mask);
+                            newValue = (mask = ko.unwrap(allBindingsAccessor.get('maskObs').currentMask)).read(element, newValue, mask);
                             val(newValue);
                         }
                     };
@@ -122,14 +123,14 @@ define(['jquery', 'knockout',
                 });
                 ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
                     $el.inputmask('remove');
-                    allBindingsAccessor.get('virtualInput').inputmask('remove');
+                    allBindingsAccessor.get('maskObs').virtualInput.inputmask('remove');
                 });
             },
             update: function(element,valueAccessor,allBindingsAccessor,viewModel,bindingContext){
                 var $el = $(element);
-                var mask = ko.unwrap(allBindingsAccessor.get('virtualMask'));
+                var mask = ko.unwrap(allBindingsAccessor.get('maskObs').virtualMask);
                 $el.inputmask(mask);                
-                allBindingsAccessor.get('currentMask')(mask);
+                allBindingsAccessor.get('maskObs').currentMask(mask);
             },
             replace: [{
                 test: function(bindingName) {
