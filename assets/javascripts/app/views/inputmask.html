@@ -105,7 +105,7 @@
                 </li>
             </ul>
         </div>
-        <div class="content" data-bind="css.active:ko.go($data).tab()=='numbers'" id="numbers">
+        <div class="content" data-bind="css.active: tab=='numbers',onceIf:tab=='numbers'" id="numbers">
             <ul class="small-block-grid-3">
                 <li>
                     <span>percentage</span>
@@ -131,15 +131,15 @@
                 </li>
             </ul>
         </div>
-        <div class="content" data-bind="css.active:ko.go($data).tab()=='i18n'" id="i18n">
+        <div class="content" data-bind="css.active: tab=='i18n',onceIf:tab=='i18n'" id="i18n">
             <ul class="small-block-grid-3">
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('Dates.datetime')">
-                    <span data-bind="text:$data['datetimeAmerican'],mask:ko.t('Dates.datetime')">
+                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('Dates.datetime')">
                 </li>
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('Dates.date')">
-                    <span data-bind="text:$data['date'],mask:ko.t('Dates.date')">
+                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('Dates.date')">
                 </li>
             </ul>
         </div>

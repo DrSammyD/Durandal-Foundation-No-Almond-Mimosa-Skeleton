@@ -1,4 +1,4 @@
-define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment' ], function (ko, locale,_, $, moment) {
+define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injectBinding'], function (ko, locale,_, $, moment) {
     ko.bindingHandlers.datetimepicker = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             //initialize datetimepicker with some optional options
@@ -34,6 +34,21 @@ define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment' ], fun
             if (valDate.isValid()) {
                 $(element).datetimepicker('update', valDate.toDate());
             }
+        }
+    };
+
+    ko.bindingHandlers.onceIf={
+        init:function(){
+            return ko.bindingHandlers.if.init.apply(this,arguments);
+        },
+        update:function(element,valueAccessor,allBindingsAccessor){
+            if(ko.unwrap(allBindingsAccessor.get('onceIf')))
+                ko.utils.extend(
+                    allBindingsAccessor,
+                    ko.utils.injectBinding(allBindingsAccessor,
+                        'onceIf',
+                        true)
+                );
         }
     };
 });
