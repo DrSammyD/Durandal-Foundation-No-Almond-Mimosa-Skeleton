@@ -6,7 +6,7 @@ requirejs.config({
         'i18next':'../vendor/i18next/i18next.amd.withJQuery',
         'jquery': '../vendor/jquery/jquery',
         'knockout': '../vendor/knockout/knockout.debug',
-        'ko-deferred': '../vendor/knockout-deferred-updates/knockout-deferred-updates',
+        'knockout-deferred-updates': '../vendor/knockout-deferred-updates/knockout-deferred-updates',
         'ko-hotkeys':'../vendor/Knockout.Hotkeys/knockout.hotkeys',
         'ko-punches': '../vendor/knockout.punches/knockout.punches',
         'knockout-es5':'../vendor/knockout-es5/knockout-es5',
@@ -25,7 +25,9 @@ requirejs.config({
         'transitions':'../vendor/durandal/transitions',
         'fastclick': '../vendor/fastclick/fastclick',
         'velocity': '../vendor/velocity/velocity',
-        'velocity-ui': '../vendor/velocity/velocity.ui'
+        'es5-shim': '../vendor/es5-shim/es5-shim',
+        'es6-shim': '../vendor/es6-shim/es6-shim',
+        'velocity-ui': '../vendor/velocity/velocity.ui',
     },
     shim: {
         'jquery':{exports:['jQuery','$']},

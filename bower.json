@@ -16,7 +16,7 @@
     "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git#master",
     "Knockout.Hotkeys": "~1.0.1",
     "knockout.punches": "~0.5.0",
-    "kodash": "~1.0.3",
+    "kodash": "~2.0.0",
     "lodash": "~2.4.1",
     "modernizr": "~2.7.1",
     "moment": "git://github.com/moment/moment.git#~2.8.1",
@@ -29,7 +29,9 @@
     "smalot-bootstrap-datetimepicker": "~2.3.1",
     "toastr": "~2.0.1",
     "velocity": "~1.1.0",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "es5-shim": "~4.0.5",
+    "es6-shim": "~0.22.1"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"

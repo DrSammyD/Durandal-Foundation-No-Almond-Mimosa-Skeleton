@@ -9,7 +9,8 @@
         activate: function () {
             router.map([
                 { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'inputmask', moduleId: 'viewmodels/inputmask', nav: true }
+                { route: 'inputmask', moduleId: 'viewmodels/inputmask', nav: true },
+                { route: 'kodash', moduleId: 'viewmodels/kodash', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();
