@@ -21,6 +21,7 @@
 	},
 	"Inputmask":{
 		"Dates":"Dates",
+		"Times":"Times",
 		"Numbers":"Numbers",
 		"i18n":"i18n",
 		"Title":"Input Masks"

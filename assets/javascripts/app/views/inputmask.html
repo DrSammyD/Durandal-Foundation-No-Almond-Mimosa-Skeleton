@@ -2,106 +2,120 @@
     <h1>{{ko.t('Inputmask.Title')}}</h1>
     <dl class="tabs">
       <dd class="tab-title"><a data-bind="click: function(){tab ='dates';}">{{ko.t('Inputmask.Dates')}}</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='times';}">{{ko.t('Inputmask.Times')}}</a></dd>
       <dd class="tab-title"><a data-bind="click: function(){tab ='numbers';}">{{ko.t('Inputmask.Numbers')}}</a></dd>
       <dd class="tab-title"><a data-bind="click: function(){tab ='i18n';}">{{ko.t('Inputmask.i18n')}}</a></dd>
     </dl>
     <div class="tabs-content">
-        <div class="content" data-bind="css.active: tab=='dates'" id="dates">
+        <div class="content" data-bind="css.active: tab=='dates', onceIf:tab=='dates'" id="dates">
+            <ul class="small-block-grid-3">
+                <li>
+                    <label>dd/mm/yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['dd/mm/yyyy'],mask:'dd/mm/yyyy'">
+                    <span data-bind="text:$data['dd/mm/yyyy'],mask:'dd/mm/yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>date</label>
+                    <input type="text" data-bind="value:ko.go($data)['date'],mask:'date'">
+                    <span data-bind="text:$data['date'],mask:'date'"></span>
+                </li>
+
+                <li>
+                    <label>mm/dd/yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['mm/dd/yyyy'],mask:'mm/dd/yyyy'">
+                    <span data-bind="text:$data['mm/dd/yyyy'],mask:'mm/dd/yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>yyyy/mm/dd</label>
+                    <input type="text" data-bind="value:ko.go($data)['yyyy/mm/dd'],mask:'yyyy/mm/dd'">
+                    <span data-bind="text:$data['yyyy/mm/dd'],mask:'yyyy/mm/dd'"></span>
+                </li>
+
+                <li>
+                    <label>dd.mm.yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['dd.mm.yyyy'],mask:'dd.mm.yyyy'">
+                    <span data-bind="text:$data['dd.mm.yyyy'],mask:'dd.mm.yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>dd-mm-yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['dd-mm-yyyy'],mask:'dd-mm-yyyy'">
+                    <span data-bind="text:$data['dd-mm-yyyy'],mask:'dd-mm-yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>mm.dd.yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['mm.dd.yyyy'],mask:'mm.dd.yyyy'">
+                    <span data-bind="text:$data['mm.dd.yyyy'],mask:'mm.dd.yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>mm-dd-yyyy</label>
+                    <input type="text" data-bind="value:ko.go($data)['mm-dd-yyyy'],mask:'mm-dd-yyyy'">
+                    <span data-bind="text:$data['mm-dd-yyyy'],mask:'mm-dd-yyyy'"></span>
+                </li>
+
+                <li>
+                    <label>yyyy.mm.dd</label>
+                    <input type="text" data-bind="value:ko.go($data)['yyyy.mm.dd'],mask:'yyyy.mm.dd'">
+                    <span data-bind="text:$data['yyyy.mm.dd'],mask:'yyyy.mm.dd'"></span>
+                </li>
+
+                <li>
+                    <label>yyyy-mm-dd</label>
+                    <input type="text" data-bind="value:ko.go($data)['yyyy-mm-dd'],mask:'yyyy-mm-dd'">
+                    <span data-bind="text:$data['yyyy-mm-dd'],mask:'yyyy-mm-dd'"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="content" data-bind="css.active: tab=='times', onceIf:tab=='times'" id="times">
             <ul class="small-block-grid-3">
                 <li>
                     <label>datetimeAmerican</label>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'],mask:'datetimeAmerican'">
-                    <span data-bind="text:$data['datetimeAmerican'],mask:'datetimeAmerican'">
+                    <span data-bind="text:$data['datetimeAmerican'],mask:'datetimeAmerican'"></span>
                 </li>
                 <li>
                     <label>datetime12American</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime12American'],mask:'datetime12American'">
-                    <span data-bind="text:$data['datetime12American'],mask:'datetime12American'">
-                </li>
-                <li>
-                    <label>dd/mm/yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['dd/mm/yyyy'],mask:'dd/mm/yyyy'">
-                    <span data-bind="text:$data['dd/mm/yyyy'],mask:'dd/mm/yyyy'">
-                </li>
-                <li>
-                    <label>date</label>
-                    <input type="text" data-bind="value:ko.go($data)['date'],mask:'date'">
-                    <span data-bind="text:$data['date'],mask:'date'">
-                </li>
-                <li>
-                    <label>mm/dd/yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['mm/dd/yyyy'],mask:'mm/dd/yyyy'">
-                    <span data-bind="text:$data['mm/dd/yyyy'],mask:'mm/dd/yyyy'">
-                </li>
-                <li>
-                    <label>yyyy/mm/dd</label>
-                    <input type="text" data-bind="value:ko.go($data)['yyyy/mm/dd'],mask:'yyyy/mm/dd'">
-                    <span data-bind="text:$data['yyyy/mm/dd'],mask:'yyyy/mm/dd'">
-                </li>
-                <li>
-                    <label>dd.mm.yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['dd.mm.yyyy'],mask:'dd.mm.yyyy'">
-                    <span data-bind="text:$data['dd.mm.yyyy'],mask:'dd.mm.yyyy'">
-                </li>
-                <li>
-                    <label>dd-mm-yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['dd-mm-yyyy'],mask:'dd-mm-yyyy'">
-                    <span data-bind="text:$data['dd-mm-yyyy'],mask:'dd-mm-yyyy'">
-                </li>
-                <li>
-                    <label>mm.dd.yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['mm.dd.yyyy'],mask:'mm.dd.yyyy'">
-                    <span data-bind="text:$data['mm.dd.yyyy'],mask:'mm.dd.yyyy'">
-                </li>
-                <li>
-                    <label>mm-dd-yyyy</label>
-                    <input type="text" data-bind="value:ko.go($data)['mm-dd-yyyy'],mask:'mm-dd-yyyy'">
-                    <span data-bind="text:$data['mm-dd-yyyy'],mask:'mm-dd-yyyy'">
-                </li>
-                <li>
-                    <label>yyyy.mm.dd</label>
-                    <input type="text" data-bind="value:ko.go($data)['yyyy.mm.dd'],mask:'yyyy.mm.dd'">
-                    <span data-bind="text:$data['yyyy.mm.dd'],mask:'yyyy.mm.dd'">
-                </li>
-                <li>
-                    <label>yyyy-mm-dd</label>
-                    <input type="text" data-bind="value:ko.go($data)['yyyy-mm-dd'],mask:'yyyy-mm-dd'">
-                    <span data-bind="text:$data['yyyy-mm-dd'],mask:'yyyy-mm-dd'">
+                    <span data-bind="text:$data['datetime12American'],mask:'datetime12American'"></span>
                 </li>
                 <li>
                     <label>datetime</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime'],mask:'datetime'">
-                    <span data-bind="text:$data['datetime'],mask:'datetime'">
+                    <span data-bind="text:$data['datetime'],mask:'datetime'"></span>
                 </li>
                 <li>
                     <label>datetime12</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime12'],mask:'datetime12'">
-                    <span data-bind="text:$data['datetime12'],mask:'datetime12'">
+                    <span data-bind="text:$data['datetime12'],mask:'datetime12'"></span>
                 </li>
                 <li>
                     <label>hh:mm t</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm t'],mask:'hh:mm t'">
-                    <span data-bind="text:$data['hh:mm t'],mask:'hh:mm t'">
+                    <span data-bind="text:$data['hh:mm t'],mask:'hh:mm t'"></span>
                 </li>
                 <li>
                     <label>h:s t</label>
                     <input type="text" data-bind="value:ko.go($data)['h:s t'],mask:'h:s t'">
-                    <span data-bind="text:$data['h:s t'],mask:'h:s t'">
+                    <span data-bind="text:$data['h:s t'],mask:'h:s t'"></span>
                 </li>
                 <li>
                     <label>hh:mm:ss</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm:ss'],mask:'hh:mm:ss'">
-                    <span data-bind="text:$data['hh:mm:ss'],mask:'hh:mm:ss'">
+                    <span data-bind="text:$data['hh:mm:ss'],mask:'hh:mm:ss'"></span>
                 </li>
                 <li>
                     <label>hh:mm</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm'],mask:'hh:mm'">
-                    <span data-bind="text:$data['hh:mm'],mask:'hh:mm'">
+                    <span data-bind="text:$data['hh:mm'],mask:'hh:mm'"></span>
                 </li>
                 <li>
                     <label>mm/yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['mm/yyyy'],mask:'mm/yyyy'">
-                    <span data-bind="text:$data['mm/yyyy'],mask:'mm/yyyy'">
+                    <span data-bind="text:$data['mm/yyyy'],mask:'mm/yyyy'"></span>
                 </li>
             </ul>
         </div>
@@ -135,11 +149,13 @@
             <ul class="small-block-grid-3">
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('Dates.datetime')">
-                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('Dates.datetime')">
+                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('Dates.datetime')"></span>
+                    <div data-bind="text:ko.go($data)['datetimeAmerican']"></div>
                 </li>
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('Dates.date')">
-                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('Dates.date')">
+                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('Dates.date')"></span>
+                    <div data-bind="text:ko.go($data)['date']"></div>
                 </li>
             </ul>
         </div>

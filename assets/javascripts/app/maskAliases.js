@@ -78,7 +78,7 @@ define(['jquery', 'moment','numeral','mathRound10',
     });
     var readWriteDateFuncs = {
         read: function(input, inputValue, opts) {
-            var readDate=moment(inputValue || null,opts.momentFormat)
+            var readDate=moment(inputValue || null,opts.momentFormat);
             if(readDate.isValid())
                 return readDate.toDate();
             return null;

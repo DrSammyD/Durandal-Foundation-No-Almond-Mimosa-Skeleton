@@ -1,7 +1,7 @@
 ﻿define(['plugins/http', 'durandal/app', 'knockout','moment', 'maskBinding','zurb/foundation.tab'], function (http, app, ko, moment) {
     var vm = function(){
         var that = this;
-        that.tab = 'dates';
+        that.tab = 'i18n';
         that.setTab=function(tab){that.tab=tab};
         that['datetimeAmerican']=Date();
         that['datetime12American']=Date();
