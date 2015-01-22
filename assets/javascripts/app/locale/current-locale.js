@@ -1,6 +1,7 @@
 define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next','datetimepicker'], function (ko, $, moment, supportedLangs) {
     supportedLangs= JSON.parse(supportedLangs);
     var locale = ko.observable($.i18n.lng());
+    locale.ns=ko.observable('shell');
     locale.equalityComparer = function(val1, val2) {
          return JSON.stringify(val1) == JSON.stringify(val2);
     };
@@ -21,7 +22,7 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
         setlng(lng, options, othercb);
     };
     $.i18n.init({
-        preload: ['en'],
+        preload: ['shell:en'],
         customLoad: function (lng, ns, cb, loadComplete) {
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);
@@ -36,18 +37,20 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
                     $.fn.datetimepicker.dates[lng] = jsData.datetimepicker;
                 }
                 loadComplete(null, jsData[ns] || jsData);
+                setTimeout(function(){locale.ns(ns)},0);
             };
             lng = (supportedLangs.base.indexOf(lng) != -1) ?
                 lng :
                 (supportedLangs.base.indexOf(lng.split('-')[0]) != -1) ?
                     lng.split('-')[0] :
                     'en';
-            deps=['text!locale/' + lng + '.json'];
+            deps=['text!locale/' + ns +'/'+ lng + '.json'];
 
             if(supportedLangs.moment.indexOf(lng)!=-1)
                 deps.push('../vendor/moment/locale/'+lng);
             require(deps, loadcb);
         },
+        ns:'shell',
         fallbackLng: 'en'
     });
     locale($.i18n.lng());

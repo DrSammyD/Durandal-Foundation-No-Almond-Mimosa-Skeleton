@@ -120,7 +120,7 @@ define(['jquery', 'knockout',
                 var mask = ko.unwrap(allBindingsAccessor.get('maskObs').virtualMask);
                 $el.inputmask('remove');
                 allBindingsAccessor.get('maskObs').currentMask(mask);
-                $el.inputmask(mask);
+                setTimeout(function(){$el.inputmask(mask);},0);
             },
             replace: [{
                 test: function(bindingName) {

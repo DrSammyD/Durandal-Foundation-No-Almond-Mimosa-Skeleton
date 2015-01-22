@@ -1,0 +1,19 @@
+{
+    "Welcome":{
+        "DisplayName":"Welcome to Durandal!",
+        "Description":"Durandal is a cross-device, cross-platform client framework written in JavaScript and designed to make Single Page Applications (SPAs) easy to create and maintain.",
+        "Features":{
+            "Clean":"Clean MV* Architecture",
+            "Modular":"JS & HTML Modularity",
+            "Lifecycle":"Simple App Lifecycle",
+            "Event":"Eventing, Modals, Message Boxes, etc.",
+            "Navigation":"Navigation & Screen State Management",
+            "Async":"Consistent Async Programming w/ Promises",
+            "Optimization":"App Bundling and Optimization",
+            "Backend":"Use any Backend Technology",
+            "Libraries":"Built on top of jQuery, Knockout & RequireJS",
+            "Integrates":"Integrates with other libraries such as SammyJS & Foundation",
+            "Widgets":"Make jQuery & Foundation widgets templatable and bindable (or build your own widgets)"
+        }
+    }
+}

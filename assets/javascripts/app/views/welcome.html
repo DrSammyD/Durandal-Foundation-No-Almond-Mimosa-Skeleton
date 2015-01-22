@@ -1,9 +1,9 @@
 ﻿<section>
-    <h2>{{ko.t(displayName)}}</h2>
-    <blockquote data-bind="">{{ko.t(description)}}</blockquote>
+    <h2>{{ko.t('welcome:'+displayName)}}</h2>
+    <blockquote data-bind="">{{ko.t('welcome:'+description)}}</blockquote>
     <h3>Stuff</h3>
     <ul data-bind="foreach: features">
-        <li>{{ko.t($data)}}</li>
+        <li>{{ko.t('welcome:'+$data)}}</li>
     </ul>
     <div class="alert alert-success">
       <h4>This uses foundation</h4>

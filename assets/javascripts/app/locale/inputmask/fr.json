@@ -1,0 +1,13 @@
+{
+	"Inputmask":{
+		"Dates":"Dates",
+		"Times":"Fois",
+		"Numbers":"Nombres",
+		"i18n":"i18n",
+		"Title":"Masque de saisie"
+		},
+	"Dates":{
+		"date": "dd/mm/yyyy",
+		"datetime":"datetime12"
+	}
+}

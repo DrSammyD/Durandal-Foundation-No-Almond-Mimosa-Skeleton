@@ -32,9 +32,9 @@ requirejs.config({
     shim: {
         'jquery':{exports:['jQuery','$']},
         'koplugs': 'knockout',
-        'jqplugs': 'jquery',
-        'datetimepicker':'jquery',
-        'velocity':'jquery',
+        'jqplugs':{deps:['jquery']},
+        'datetimepicker':{deps:['jquery']},
+        'velocity':{deps:['jquery']},
         'velocity-ui':'velocity',
         'fastclick':{exports:['FastClick']},
         'zurb/foundation':{exports:'Foundation',deps:['jquery','fastclick']},

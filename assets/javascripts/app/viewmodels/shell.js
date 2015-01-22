@@ -1,4 +1,4 @@
-﻿define(['plugins/router', 'durandal/app','i18next','locale/current-locale'], function (router, app, i18next, locale) {
+﻿define(['plugins/router', 'durandal/app','i18next','locale/current-locale','knockout'], function (router, app, i18next, locale,ko) {
     return {
         router: router,
         search: function() {
@@ -8,9 +8,9 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'inputmask', moduleId: 'viewmodels/inputmask', nav: true },
-                { route: 'kodash', moduleId: 'viewmodels/kodash', nav: true }
+                { route: '', title:ko.translate("Welcome"), moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true },
+                { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();

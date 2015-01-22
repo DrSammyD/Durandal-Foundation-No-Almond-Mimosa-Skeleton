@@ -1,10 +1,10 @@
 <div>
-    <h1>{{ko.t('Inputmask.Title')}}</h1>
+    <h1>{{ko.t('inputmask:Inputmask.Title')}}</h1>
     <dl class="tabs">
-      <dd class="tab-title"><a data-bind="click: function(){tab ='dates';}">{{ko.t('Inputmask.Dates')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='times';}">{{ko.t('Inputmask.Times')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='numbers';}">{{ko.t('Inputmask.Numbers')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='i18n';}">{{ko.t('Inputmask.i18n')}}</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='dates';}">{{ko.t('inputmask:Inputmask.Dates')}}</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='times';}">{{ko.t('inputmask:Inputmask.Times')}}</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='numbers';}">{{ko.t('inputmask:Inputmask.Numbers')}}</a></dd>
+      <dd class="tab-title"><a data-bind="click: function(){tab ='i18n';}">{{ko.t('inputmask:Inputmask.i18n')}}</a></dd>
     </dl>
     <div class="tabs-content">
         <div class="content" data-bind="css.active: tab=='dates', onceIf:tab=='dates'" id="dates">
@@ -148,14 +148,17 @@
         <div class="content" data-bind="css.active: tab=='i18n',onceIf:tab=='i18n'" id="i18n">
             <ul class="small-block-grid-3">
                 <li>
-                    <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('Dates.datetime')">
-                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('Dates.datetime')"></span>
+                    <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('inputmask:Dates.datetime')">
+                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('inputmask:Dates.datetime')"></span>
                     <div data-bind="text:ko.go($data)['datetimeAmerican']"></div>
                 </li>
                 <li>
-                    <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('Dates.date')">
-                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('Dates.date')"></span>
+                    <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('inputmask:Dates.date')">
+                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('inputmask:Dates.date')"></span>
                     <div data-bind="text:ko.go($data)['date']"></div>
+                </li>
+                <li>
+                    <input type="text" data-bind="datetimepicker:ko.go($data)['date']"/>
                 </li>
             </ul>
         </div>

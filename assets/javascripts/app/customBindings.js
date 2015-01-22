@@ -21,7 +21,7 @@ define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injec
             $(element).datetimepicker('remove');
             $(element).datetimepicker(ko.toJS(options));
 
-            $(element).data().datetimepicker.dates.pop();
+            $(element).data().datetimepicker.date;
             var startDate = moment(ko.utils.unwrapObservable(options.startDate));
             var endDate = moment(ko.utils.unwrapObservable(options.endDate));
             var valDate = moment(ko.utils.unwrapObservable(valueAccessor()));
