@@ -1,11 +1,10 @@
-var express = require('express')
-  , bodyParser = require('body-parser')
-  , engines = require('consolidate')
-  , compression = require('compression')
-  , favicon = require('serve-favicon')
-  , cookieParser = require('cookie-parser')
-  , errorHandler = require('errorhandler')
-  ;
+var express = require('express'),
+    bodyParser = require('body-parser'),
+    engines = require('consolidate'),
+    compression = require('compression'),
+    favicon = require('serve-favicon'),
+    cookieParser = require('cookie-parser'),
+    errorHandler = require('errorhandler');
 
 exports.startServer = function(config, callback) {
   var app = express();
@@ -29,9 +28,9 @@ exports.startServer = function(config, callback) {
   }
 
   // routes
-  cachebust = ''
+  cachebust = '';
   if (process.env.NODE_ENV !== "production") {
-    cachebust = "?b=" + (new Date()).getTime()
+    cachebust = "?b=" + (new Date()).getTime();
   }
 
   var routeOptions = {
@@ -40,7 +39,7 @@ exports.startServer = function(config, callback) {
     cachebust: cachebust
   };
 
-  var router = express.Router()
+  var router = express.Router();
   router.get('/', function(req, res) {
     res.render('index', routeOptions);
 

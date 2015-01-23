@@ -3,7 +3,7 @@ define('main',['durandal/app','durandal/viewLocator','durandal/system','knockout
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
-    require({baseUrl:'./javascripts/app'})
+    require({baseUrl:'./javascripts/app'});
     ko.punches.enableAll();
     app.title = 'Durandal';
 
