@@ -1,0 +1,8 @@
+@import "_settings";
+@import "_foundation";
+.watermark {
+    opacity: 0.5;
+    position: fixed;
+    top: auto;
+    left: 80%;
+}

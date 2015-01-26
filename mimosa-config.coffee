@@ -29,7 +29,7 @@ exports.config =
   sass:
     lib: require('node-sass')
     extensions: ["sass", "scss"]
-    includePaths: ['stylesheets/vendor/foundation/scss','stylesheets/vendor/Hover/scss']
+    includePaths: ['stylesheets/vendor/foundation','stylesheets/vendor/Hover/scss']
     
   requireBuildTextPluginInclude:
     pluginPath: 'text'
@@ -56,9 +56,10 @@ exports.config =
             css: "durandal"
           }
         ]
-        "foundation":[          
+        "foundation":[
             "js/foundation"
-            scss: "foundation"
+            'scss/normalize.scss'
+            "scss/foundation/":'/foundation/'
         ],
         "hovercss":[
           scss:"hover/scss"
