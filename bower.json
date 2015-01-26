@@ -27,7 +27,7 @@
     "requirejs": "~2.1.8",
     "requirejs-text": "~2.0.3",
     "selectize": "~0.11.0",
-    "smalot-bootstrap-datetimepicker": "~2.3.1",
+    "datetimepicker": "~2.4.1",
     "toastr": "~2.0.1",
     "velocity": "~1.1.0",
     "jquery": "~2.1.1",
