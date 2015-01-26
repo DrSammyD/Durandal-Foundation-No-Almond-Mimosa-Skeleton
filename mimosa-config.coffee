@@ -58,8 +58,7 @@ exports.config =
         ]
         "foundation":[
             "js/foundation"
-            'scss/normalize.scss'
-            "scss/foundation/":'/foundation/'
+            'scss':'foundation/'
         ],
         "hovercss":[
           scss:"hover/scss"
