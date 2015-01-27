@@ -61,8 +61,11 @@ exports.config =
             'scss/normalize.scss'
             "scss/foundation/":'/foundation/'
         ],
-        "hovercss":[
-          scss:"hover/scss"
+        "hover":[
+            "scss/_options.scss",
+            "scss/_mixins.scss",
+            "scss/_hacks.scss",
+            "scss/effects/":'/hover/effects/'
         ]
         "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
