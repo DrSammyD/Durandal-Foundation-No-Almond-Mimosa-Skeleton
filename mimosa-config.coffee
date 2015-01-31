@@ -56,11 +56,16 @@ exports.config =
             css: "durandal"
           }
         ]
+        "datetimepicker":[
+            "dist/javascripts/jquery.moment.datetimepicker.js"
+            'stylesheets/'
+            
+        ]
         "foundation":[
             "js/foundation"
             'scss/normalize.scss'
             "scss/foundation/":'/foundation/'
-        ],
+        ]
         "hovercss":[
           scss:"hover/scss"
         ]

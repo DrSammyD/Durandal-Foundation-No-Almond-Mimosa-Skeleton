@@ -27,15 +27,6 @@ define(['knockout', 'jquery', 'moment', 'text!locale/supported.json', 'i18next',
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);
                 moment.locale(lng);
-                if (!$.fn.datetimepicker.dates[lng]) {
-                    jsData.datetimepicker = jsData.datetimepicker || {};
-                    jsData.datetimepicker["months"] = moment.months();
-                    jsData.datetimepicker["monthsShort"] = moment.monthsShort();
-                    jsData.datetimepicker["days"] = moment.weekdays();
-                    jsData.datetimepicker["daysShort"] = moment.weekdaysShort();
-                    jsData.datetimepicker["daysMin"] = moment.weekdaysMin();
-                    $.fn.datetimepicker.dates[lng] = jsData.datetimepicker;
-                }
                 loadComplete(null, jsData[ns] || jsData);
                 setTimeout(function(){locale.ns(ns)},0);
             };

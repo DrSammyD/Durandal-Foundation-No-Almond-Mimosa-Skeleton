@@ -158,7 +158,7 @@
                     <div data-bind="text:ko.go($data)['date']"></div>
                 </li>
                 <li>
-                    <input type="text" data-bind="datetimepicker:ko.go($data)['date']"/>
+                    <input type="text" data-bind="mask: 'datetimeAmerican', value:ko.go($data)['date'],datetimepicker:{}"/>
                 </li>
             </ul>
         </div>

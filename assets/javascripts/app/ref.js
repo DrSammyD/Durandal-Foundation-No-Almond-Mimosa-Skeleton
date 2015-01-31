@@ -1,10 +1,11 @@
 requirejs.config({
     paths: {
-        'datetimepicker': '../vendor/smalot-bootstrap-datetimepicker/bootstrap-datetimepicker',
+        'datetimepicker': '../vendor/datetimepicker/jquery.moment.datetimepicker',
         'durandal':'../vendor/durandal',
         'zurb' : '../vendor/foundation',
         'i18next':'../vendor/i18next/i18next.amd.withJQuery',
         'jquery': '../vendor/jquery/jquery',
+        'jquery.mousewheel': '../vendor/jquery-mousewheel/jquery.mousewheel',
         'knockout': '../vendor/knockout/knockout.debug',
         'knockout-deferred-updates': '../vendor/knockout-deferred-updates/knockout-deferred-updates',
         'ko-hotkeys':'../vendor/Knockout.Hotkeys/knockout.hotkeys',
