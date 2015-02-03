@@ -26,6 +26,11 @@ define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injec
         },
         after:['mask']
     };
+    ko.utils.arrayForEach(
+        ['datetimepicker'],
+        function(item) {
+            ko.bindingHandlers.mask.register(item);
+        });
     ko.bindingHandlers.mask.replace.push({
         test: 'datetimepicker',
         valToUse: function(bindingName, val) {

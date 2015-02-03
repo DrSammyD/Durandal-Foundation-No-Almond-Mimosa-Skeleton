@@ -21,7 +21,7 @@ requirejs.config({
         'selectize': '../vendor/selectize/selectize',
         'microplugin': '../vendor/microplugin/microplugin',
         'sifter': '../vendor/sifter/sifter',
-        'text': '../vendor/requirejs-text/text',
+        'text': '../vendor/requirejs-texport/text',
         'toastr': '../vendor/toastr/toastr',
         'transitions':'../vendor/durandal/transitions',
         'fastclick': '../vendor/fastclick/fastclick',
@@ -62,4 +62,4 @@ requirejs.config({
         },
         'koES5Mod':{'knockout-es5':'knockout-es5'}
     }
-})(['main'],function(){});
+});

@@ -1,6 +1,6 @@
 path = require('path')
 exports.config =
-
+  
   minMimosaVersion:'2.0.0'
   liveReload:
     enabled:true
@@ -58,8 +58,7 @@ exports.config =
         ]
         "datetimepicker":[
             "dist/javascripts/jquery.moment.datetimepicker.js"
-            'stylesheets/'
-            
+            'stylesheets/'            
         ]
         "foundation":[
             "js/foundation"
@@ -80,9 +79,6 @@ exports.config =
           "css/font-awesome.css"
           "css/font-awesome-ie7.css"
         ]
-        "lodash":[
-          'dist':'lodash'
-        ]
         "smalot-bootstrap-datetimepicker":[
           'js':'smalot-bootstrap-datetimepicker'
         ]
@@ -97,8 +93,9 @@ exports.config =
           "velocity.js"
           "velocity.ui.js"
         ]
-        "bootstrap":[]
-        "knockout.js":[]
+        "require-texport":[
+          "text.js":"requirejs-text/"
+        ]
   combine:
     folders: [
       {
@@ -111,17 +108,18 @@ exports.config =
       }
     ]
   require:
+    commonConfig: "ref"
     optimize:
       inferConfig:true 
       overrides: (infered)->
-        infered.mainConfigFile='./public/javascripts/app/ref.js'
         infered.name='main'
         infered.include=['requireLib', 'main']
         infered.insertRequire=['main']
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
-        infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
+        #infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
         infered.build= true
+        infered.optimize='uglify2'
         return infered
 
   server:
@@ -134,6 +132,7 @@ exports.config =
 
   csslint:
     exclude:[
-      'stylesheets/site.scss'
+      'stylesheets/app/site.scss'
       'stylesheets/starterkit.css'
+      '/stylesheets/vendor/hover/scss/hover.scss'
    ]

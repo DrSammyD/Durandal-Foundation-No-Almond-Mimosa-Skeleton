@@ -1,7 +1,7 @@
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['underscore','knockout','knockout-es5'], factory);
+        define(['lodash','knockout','knockout-es5'], factory);
     } else {
         factory(_,ko);
     }

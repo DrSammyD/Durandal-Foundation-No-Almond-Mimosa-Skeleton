@@ -1,9 +1,4 @@
-define(['jquery','knockout','plugins/router','durandal/composition','maskBinding','jqplugs'],function($,ko,rootRouter,composition){
-    ko.utils.arrayForEach(
-        ['datetimepicker'],
-        function(item) {
-            ko.bindingHandlers.mask.register(item);
-        });
+define(['jquery','knockout','plugins/router','durandal/composition','moment','q','jqplugs'],function($,ko,rootRouter,composition,moment){
     rootRouter.install = function(){
         var lastActiveItem=null;
         ko.bindingHandlers.router = {
