@@ -1,9 +1,18 @@
 define(['knockout', 'jquery', 'locale/current-locale'], function(ko, $, locale) {
+    
+    var keys=[];
+    var requestKey=function(key){
+        if(!~keys.indexOf(key))
+        {
+            $.i18n.loadNamespace(key);
+            keys.push(key);
+        }
+    };
     ko['t'] = function(key, options) {
         locale();
         locale.ns();
         if (!$.i18n.exists(key))
-            $.i18n.loadNamespace(key.split(':')[0]);
+            requestKey(key.split(':')[0]);
         var unwrapped = {};
         if (options) {
             var opts = ko.toJS(options);
@@ -21,6 +30,8 @@ define(['knockout', 'jquery', 'locale/current-locale'], function(ko, $, locale) 
         return ko.computed(function() {
             locale();
             locale.ns();
+            if (!$.i18n.exists(key))
+                requestKey(key.split(':')[0]);
             var unwrapped = {};
             if (options) {
                 var opts = ko.toJS(options);

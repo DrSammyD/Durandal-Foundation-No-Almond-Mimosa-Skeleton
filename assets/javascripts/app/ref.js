@@ -1,10 +1,11 @@
 requirejs.config({
     paths: {
-        'datetimepicker': '../vendor/smalot-bootstrap-datetimepicker/bootstrap-datetimepicker',
+        'datetimepicker': '../vendor/datetimepicker/jquery.moment.datetimepicker',
         'durandal':'../vendor/durandal',
         'zurb' : '../vendor/foundation',
         'i18next':'../vendor/i18next/i18next.amd.withJQuery',
         'jquery': '../vendor/jquery/jquery',
+        'jquery.mousewheel': '../vendor/jquery-mousewheel/jquery.mousewheel',
         'knockout': '../vendor/knockout/knockout.debug',
         'knockout-deferred-updates': '../vendor/knockout-deferred-updates/knockout-deferred-updates',
         'ko-hotkeys':'../vendor/Knockout.Hotkeys/knockout.hotkeys',
@@ -20,7 +21,7 @@ requirejs.config({
         'selectize': '../vendor/selectize/selectize',
         'microplugin': '../vendor/microplugin/microplugin',
         'sifter': '../vendor/sifter/sifter',
-        'text': '../vendor/requirejs-text/text',
+        'text': '../vendor/requirejs-texport/text',
         'toastr': '../vendor/toastr/toastr',
         'transitions':'../vendor/durandal/transitions',
         'fastclick': '../vendor/fastclick/fastclick',
@@ -61,4 +62,4 @@ requirejs.config({
         },
         'koES5Mod':{'knockout-es5':'knockout-es5'}
     }
-})(['main'],function(){});
+});

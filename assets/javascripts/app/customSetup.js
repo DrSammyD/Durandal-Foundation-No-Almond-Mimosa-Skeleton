@@ -1,13 +1,4 @@
-define(['jquery','knockout','plugins/router','durandal/composition','maskBinding','jqplugs'],function($,ko,rootRouter,composition){
-    console.log($.fn.jquery);
-        var dpglobal=$.fn.datetimepicker.DPGlobal;
-        dpglobal.headTemplate= '<thead><tr><th class="fa fa-chevron-left "></th><th colspan="5" class="datepicker-switch"></th><th class="next">&raquo;</th></tr></thead>'
-    
-    ko.utils.arrayForEach(
-        ['datetimepicker'],
-        function(item) {
-            ko.bindingHandlers.mask.register(item);
-        });
+define(['jquery','knockout','plugins/router','durandal/composition','moment','q','jqplugs'],function($,ko,rootRouter,composition,moment){
     rootRouter.install = function(){
         var lastActiveItem=null;
         ko.bindingHandlers.router = {
@@ -39,4 +30,4 @@ define(['jquery','knockout','plugins/router','durandal/composition','maskBinding
 
         ko.virtualElements.allowedBindings.router = true;
     };
-})
+});

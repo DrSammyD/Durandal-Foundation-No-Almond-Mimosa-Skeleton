@@ -62,7 +62,6 @@ define(['jquery', 'knockout',
                 createMaskObservable($el, allBindingsAccessor);
 
                 var exact = 0;
-                var stuff;
                 bindingNames = getBindingNames(allBindingsAccessor);
                 ko.utils.arrayForEach(bindingNames, function(bindingName) {
                     var valToUse, morphToUse;
@@ -71,7 +70,7 @@ define(['jquery', 'knockout',
                     if (bindingToIntercept) {
                         exact = 0;
                         ko.utils.arrayForEach(ko.bindingHandlers.mask.replace, function(item) {
-                            stuff = (exact !== 1) &&
+                            (exact !== 1) &&
                                 (exact = runTest(item.test, bindingName)) &&
                                 (valToUse = function(){return item.valToUse(bindingName, getOrig.call(allBindingsAccessor,bindingName) );},
                                     morphToUse = item.morph);
@@ -100,7 +99,7 @@ define(['jquery', 'knockout',
                         notify: 'always'
                     });
                     interceptor.deferUpdates=false;
-                    var binding = morphToUse(bindingName, bindingToIntercept, interceptor);
+                    var binding = morphToUse(bindingName, bindingToIntercept, interceptor, allBindingsAccessor);
                     for (var key in binding) {
                         ko.utils.extend(
                             allBindingsAccessor,

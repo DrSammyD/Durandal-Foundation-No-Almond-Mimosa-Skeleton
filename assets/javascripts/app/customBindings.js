@@ -1,41 +1,48 @@
-define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injectBinding'], function (ko, locale,_, $, moment) {
+define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injectBinding','maskBinding'], function (ko, locale,_, $, moment) {
     ko.bindingHandlers.datetimepicker = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             //initialize datetimepicker with some optional options
-            var options = allBindingsAccessor().datetimepickerOptions || {};
-            options.language = locale;
-            ko.toJSON(options);
-            $(element).datetimepicker(ko.toJS(options));
+            $el= $(element);
 
             //when a user changes the date, update the view model
-            $(element).on("change", function (event) {
-                var value = valueAccessor();
-                if (ko.isObservable(value)) {
-                    value(moment($(element).datetimepicker("getDate")).toISOString());
-                }
-            });
+            if(!allBindingsAccessor.get('mask'))
+                $el.on("change", function (event) {
+                    var value = allBindingsAccessor('value');
+                    if (ko.isObservable(value)) {
+                        value($el.data('xdsoft_datetimepicker').data('xdsoft_datetime').getCurrentTime());
+                    }
+                });
         },
         update: function (element, valueAccessor, allBindingsAccessor) {
-            var options = allBindingsAccessor().datetimepickerOptions || {};
-            options.language = locale();
-            $(element).datetimepicker('remove');
-            $(element).datetimepicker(ko.toJS(options));
-
-            $(element).data().datetimepicker.date;
-            var startDate = moment(ko.utils.unwrapObservable(options.startDate));
-            var endDate = moment(ko.utils.unwrapObservable(options.endDate));
-            var valDate = moment(ko.utils.unwrapObservable(valueAccessor()));
-            if (options.startDate && startDate.isValid()) {
-                $(element).datetimepicker('setStartDate', startDate.toDate());
-            }
-            if (options.endDate && endDate.isValid()) {
-                $(element).datetimepicker('setEndDate', endDate.toDate());
-            }
-            if (valDate.isValid()) {
-                $(element).datetimepicker('update', valDate.toDate());
-            }
-        }
+            $el= $(element);
+            var options = allBindingsAccessor.get('datetimepicker');
+            locale();
+            options.value = ko.utils.unwrapObservable(allBindingsAccessor.get('value'))||undefined;
+            options.minDate = ko.utils.unwrapObservable(options.startDate)||undefined;
+            options.maxDate = ko.utils.unwrapObservable(options.endDate)||undefined;
+            options.format = ko.utils.unwrapObservable(options.format)||undefined;
+            $el.datetimepicker('reset');
+            $el.datetimepicker(ko.toJS(options));
+        },
+        after:['mask']
     };
+    ko.utils.arrayForEach(
+        ['datetimepicker'],
+        function(item) {
+            ko.bindingHandlers.mask.register(item);
+        });
+    ko.bindingHandlers.mask.replace.push({
+        test: 'datetimepicker',
+        valToUse: function(bindingName, val) {
+            return val;
+        },
+        morph: function(bindingName, val, interceptor, allBindingsAccessor) {
+            bindings = {};
+            val.format=ko.computed(function(){return allBindingsAccessor.get('maskObs').currentMask().momentFormat });
+            bindings[bindingName]=val;
+            return bindings;
+        }
+    });
 
     ko.bindingHandlers.onceIf={
         init:function(){
