@@ -1,0 +1,14 @@
+{
+    "Import":"import",
+    "Export":"export",
+    "Markdown":"Markdown",
+    "MdIntro":"Markdown? À mon avis? Il est plus facile que vous le pensez!",
+    "MdExample":"Voici quelques markdown importés",
+    "ModuleName":"un/module",
+    "SecondProperty":"Deuxième Propriété",
+    "FirstProperty":"Première Propriété",
+    "SecondSentence":"Cela a été également été transportés à partir d'un fichier importé md",
+    "FirstSentence":"Cela a été transporté d'un fichier importé md",
+    "HtmlExample":"Voici quelques html qui importe que markdown",
+    "OutExample":"Voici ce que cela ressemble"
+}

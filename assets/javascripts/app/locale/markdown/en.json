@@ -1,0 +1,14 @@
+{
+    "Import":"import",
+    "Export":"export",
+    "Markdown":"Markdown",
+    "MdIntro":"Markdown? In my view? It's Easier than you think!",
+    "MdExample":"Here's some imported markdown",
+    "ModuleName":"some/module",
+    "SecondProperty": "Second Property",
+    "FirstProperty": "First Property",
+    "SecondSentence":"This has been also been transported from an imported md file",
+    "FirstSentence":"This has been transported from an imported md file",
+    "HtmlExample":"Here's some html that imports that markdown",
+    "OutExample":"Here's what that looks like"
+}

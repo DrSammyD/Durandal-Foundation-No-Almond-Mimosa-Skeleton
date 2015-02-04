@@ -1,6 +1,4 @@
-@import "_settings";
-@import "_foundation";
-@import "_hover";
+@import "_settings", "_foundation", "_hover", "_docs";
 .watermark {
     opacity: 0.5;
     position: fixed;

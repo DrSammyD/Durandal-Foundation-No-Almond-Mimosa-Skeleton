@@ -6,21 +6,22 @@ exports.config =
     enabled:true
 
   modules: [
-    'server'
-    'require'
-    'minify-js'
-    'minify-css'
-    'sass'
-    'live-reload'
-    'jshint'
-    'csslint'
+    'bower'
     'combine'
+    'copy'
+    'csslint'
+    'jshint'
+    'live-reload'
+    'markdown'
+    'minify-css'
+    'minify-js'
+    'require'
+    'require-commonjs'
     'requirebuild-include'
     'requirebuild-textplugin-include'
-    'bower'
-    'require-commonjs'
+    'sass'
+    'server'
     'web-package'
-    'copy'
   ]
 
   watch:
@@ -65,8 +66,11 @@ exports.config =
             'scss/normalize.scss'
             "scss/foundation/":'/foundation/'
         ]
-        "hovercss":[
-          scss:"hover/scss"
+        "hover":[
+          "scss/effects":'/hover/effects'
+          "scss/_hacks.scss":'/hover/_hacks.scss'
+          "scss/_mixins.scss":'/hover/_mixins.scss'
+          "scss/_options.scss":'/hover/_options.scss'
         ]
         "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
@@ -85,6 +89,9 @@ exports.config =
         "knockout-es5":[
           'dist'
         ]
+        "lodash":[
+          'dist'
+        ]
         "moment":[
           "locale/":"moment/locale/"
           "moment.js"
@@ -96,6 +103,7 @@ exports.config =
         "require-texport":[
           "text.js":"requirejs-text/"
         ]
+
   combine:
     folders: [
       {
@@ -107,6 +115,7 @@ exports.config =
         ]
       }
     ]
+
   require:
     commonConfig: "ref"
     optimize:
