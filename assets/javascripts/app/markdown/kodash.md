@@ -30,18 +30,18 @@ setInterval(function() {
     modOb(Math.round(Math.random() * 10));
 }, 2000);
 ```
-{{JSON.stringify(depFilterArray())}}
+- vm.depFilterArray {{JSON.stringify(depFilterArray())}}
 
 Chaining dependencies
 =====================
 ```javascript
 vm.observableDiff= vm.observableFilter._().map(function(item){return item%10;}).intersection(vm.depFilterArray).observe();
 ```
-{{JSON.stringify(observableDiff())}}
+- vm.observableDiff {{JSON.stringify(observableDiff())}}
 
 Efficient
 =========
-Only runs at the point of an observable change. It doesn't recalculate
+Only runs at the point of an observable change. It doesn't recalculate lodash calls before that point.
 
 ```
 vm.compRunCount = ko.observable(0);
