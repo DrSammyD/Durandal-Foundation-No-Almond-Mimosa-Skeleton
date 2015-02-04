@@ -1,0 +1,13 @@
+define(['ko-go',
+        'knockout-deferred-updates',
+        'ko-punches',
+        'ko-hotkeys',
+        'kodash',
+        'locale/ko-t',
+        'plugs/bindings/datetimepickerBinding',
+        'plugs/bindings/onceIf',
+        'plugs/bindings/selectizeBinding',
+        'maskBinding',
+        'components/register'
+    ],
+    function(){});

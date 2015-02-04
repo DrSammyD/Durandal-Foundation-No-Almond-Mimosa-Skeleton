@@ -1,10 +1,10 @@
-define(['jquery', 'moment','numeral','mathRound10',
-        '../vendor/jquery.inputmask/jquery.inputmask',
-        '../vendor/jquery.inputmask/jquery.inputmask.date.extensions',
-        '../vendor/jquery.inputmask/jquery.inputmask.extensions',
-        '../vendor/jquery.inputmask/jquery.inputmask.numeric.extensions',
-        '../vendor/jquery.inputmask/jquery.inputmask.phone.extensions',
-        '../vendor/jquery.inputmask/jquery.inputmask.regex.extensions'], function ($, moment, numeral) {
+define(['jquery', 'moment','numeral','plugs/mask/mathRound10',
+        'jquery.inputmask/jquery.inputmask',
+        'jquery.inputmask/jquery.inputmask.date.extensions',
+        'jquery.inputmask/jquery.inputmask.extensions',
+        'jquery.inputmask/jquery.inputmask.numeric.extensions',
+        'jquery.inputmask/jquery.inputmask.phone.extensions',
+        'jquery.inputmask/jquery.inputmask.regex.extensions'], function ($, moment, numeral) {
     var numericMask = $.inputmask.defaults.aliases.numeric;
     $.extend(numericMask,
         {

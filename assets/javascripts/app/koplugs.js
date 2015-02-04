@@ -1,1 +1,0 @@
-define(['koES5Mod','knockout-deferred-updates','ko-punches','ko-hotkeys','kodash','locale/ko-t','customBindings','maskBinding','components/register'],function(){});

@@ -1,6 +1,6 @@
 define(['jquery', 'knockout',
         'injectBinding',
-        'maskAliases'
+        'plugs/mask/maskAliases'
     ],
     function($, ko, injectBinding, masks) {
         var getFallback = function(key) {

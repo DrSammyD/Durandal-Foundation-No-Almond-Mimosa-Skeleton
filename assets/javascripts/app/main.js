@@ -1,4 +1,3 @@
 require(['ref'], function (common) {
-
-    require(['start']);
+    setTimeout(function(){require(['start']);},1000);
 });

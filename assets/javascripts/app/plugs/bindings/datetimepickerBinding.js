@@ -1,4 +1,4 @@
-define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injectBinding','maskBinding'], function (ko, locale,_, $, moment) {
+define(['knockout', 'locale/current-locale', 'jquery', 'moment', 'datetimepicker' ,'maskBinding'], function (ko, locale, $, moment) {
     ko.bindingHandlers.datetimepicker = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             //initialize datetimepicker with some optional options
@@ -43,19 +43,4 @@ define(['knockout', 'locale/current-locale', 'lodash', 'jquery', 'moment','injec
             return bindings;
         }
     });
-
-    ko.bindingHandlers.onceIf={
-        init:function(){
-            return ko.bindingHandlers.if.init.apply(this,arguments);
-        },
-        update:function(element,valueAccessor,allBindingsAccessor){
-            if(ko.unwrap(allBindingsAccessor.get('onceIf')))
-                ko.utils.extend(
-                    allBindingsAccessor,
-                    ko.utils.injectBinding(allBindingsAccessor,
-                        'onceIf',
-                        true)
-                );
-        }
-    };
 });

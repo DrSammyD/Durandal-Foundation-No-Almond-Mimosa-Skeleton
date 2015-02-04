@@ -1,7 +1,11 @@
 requirejs.config({
+    baseUrl:'/javascripts/app',
     paths: {
+        'plugs':'../app/plugs',
         'datetimepicker': '../vendor/datetimepicker/jquery.moment.datetimepicker',
         'durandal':'../vendor/durandal',
+        'jquery.inputmask':'../vendor/jquery.inputmask',
+        'bindings':'plugs/bindings',
         'zurb' : '../vendor/foundation',
         'i18next':'../vendor/i18next/i18next.amd.withJQuery',
         'jquery': '../vendor/jquery/jquery',
@@ -29,6 +33,12 @@ requirejs.config({
         'es5-shim': '../vendor/es5-shim/es5-shim',
         'es6-shim': '../vendor/es6-shim/es6-shim',
         'velocity-ui': '../vendor/velocity/velocity.ui',
+        'koplugs': 'plugs/frameworkDeps/koplugs',
+        'jqplugs':'plugs/frameworkDeps/jqplugs',
+        'injectBinding':'plugs/ko/injectBinding',
+        'ko-go':'plugs/ko/ko-go',
+        'trackRecursive':'plugs/ko/trackRecursive',
+        'maskBinding':'plugs/bindings/maskBinding'
     },
     shim: {
         'jquery':{exports:['jQuery','$']},
@@ -57,9 +67,7 @@ requirejs.config({
     },
     map:{
         '*':{
-            'knockout-es5':'koES5Mod',
             'underscore':'lodash'
-        },
-        'koES5Mod':{'knockout-es5':'knockout-es5'}
+        }
     }
 });
