@@ -19,7 +19,7 @@ define(['plugins/http', 'durandal/app', 'knockout', 'moment', 'maskBinding', 'zu
             modOb(Math.round(Math.random() * 10));
         }, 2000);
 
-        vm.observableDiff= vm.observableFilter._().map(function(item){return item%10;}).intersection(vm.depFilterArray).observe();
+        vm.observableIntersection= vm.observableFilter._().map(function(item){return item%10;}).intersection(vm.depFilterArray).observe();
 
         vm.compRunCount = ko.observable(0);
         vm.kodashRunCount = ko.observable(0);

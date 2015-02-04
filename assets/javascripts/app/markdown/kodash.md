@@ -1,12 +1,10 @@
-kodash
-======
+#{{ko.t('shell:Kodash')}}
 
-Knockout dependency detection in chained lodash calls.
+###{{ko.t('kodash:SubHeader')}}
 
-It's a simple extension of KnockoutJS which allows you to call lodash functions on observableArrays and observables.
+{{ko.t('kodash:Summary')}}
 
-Making observable filters
-==================
+##{{ko.t('kodash:Make')}}
 ```javascript
 var vm = this;
 var x = ko.observableArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
@@ -32,16 +30,14 @@ setInterval(function() {
 ```
 - vm.depFilterArray {{JSON.stringify(depFilterArray())}}
 
-Chaining dependencies
-=====================
+##{{ko.t('kodash:Chain')}}
 ```javascript
-vm.observableDiff= vm.observableFilter._().map(function(item){return item%10;}).intersection(vm.depFilterArray).observe();
+vm.observableIntersection= vm.observableFilter._().map(function(item){return item%10;}).intersection(vm.depFilterArray).observe();
 ```
-- vm.observableDiff {{JSON.stringify(observableDiff())}}
+- vm.observableIntersection {{JSON.stringify(observableIntersection())}}
 
-Efficient
-=========
-Only runs at the point of an observable change. It doesn't recalculate lodash calls before that point.
+##{{ko.t('kodash:Efficient')}}
+{{ko.t('kodash:Summary')}}
 
 ```
 vm.compRunCount = ko.observable(0);

@@ -1,1 +1,8 @@
-{}
+{
+    "SubHeader":"Knockout dependency detection in chained lodash calls.",
+    "Summary": "It's a simple extension of KnockoutJS which allows you to call lodash functions on observableArrays and observables.",
+    "Make":"Making observable filters",
+    "Chain":"Chaining dependencies",
+    "Efficient":"Efficient",
+    "EfficientSummary":"Only runs at the point of an observable change. It doesn't recalculate lodash calls before that point."
+}
