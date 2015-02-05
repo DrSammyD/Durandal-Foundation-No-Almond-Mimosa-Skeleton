@@ -150,15 +150,10 @@
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('inputmask:Dates.datetime')">
                     <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('inputmask:Dates.datetime')"></span>
-                    <div data-bind="text:ko.go($data)['datetimeAmerican']"></div>
                 </li>
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('inputmask:Dates.date')">
                     <span data-bind="text:ko.go($data)['date'],mask:ko.t('inputmask:Dates.date')"></span>
-                    <div data-bind="text:ko.go($data)['date']"></div>
-                </li>
-                <li>
-                    <input type="text" data-bind="mask: 'datetimeAmerican', value:ko.go($data)['date'],datetimepicker:{}"/>
                 </li>
             </ul>
         </div>

@@ -2,5 +2,7 @@
 	"Lang":"Set Language",
     "Welcome":"Welcome",
     "Inputmasks":"Input Masks",
-    "Kodash":"Kodash"
+    "Kodash":"Kodash",
+    "Markdown":"Markdown",
+    "Webcomponent":"Web Components"
 }

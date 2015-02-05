@@ -1,0 +1,13 @@
+{
+    "Header":"Web components",
+    "Summary":"Web components are a powerful new tool to web development, and knockout makes it available rignt now before the spec is even implemented in browsers.",
+    "Vcard":"Vcard",
+    "VcardExample":"Here's a simple vcard web component",
+    "Creation":"Creation",
+    "JavascriptExample":"Make a javacript file and import your template",
+    "HtmlExample":"Create your template vcard.html",
+    "Register":"Registration",
+    "RegisterExample":"Now Register with knockout. I do this in a single file which holds all registrations",
+    "Usage":"Usage",
+    "UsageExample":"Use a vcard tag and pass in some parameters. I've made it so mine can simply take an object, but you can also set each parameter individually."
+}

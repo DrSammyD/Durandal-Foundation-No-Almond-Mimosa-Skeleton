@@ -1,0 +1,13 @@
+{
+    "Header":"Composants Web",
+    "Summary":"Composants Web sont un nouvel outil puissant pour le développement web, et KO rend rignt maintenant disponible avant la spec est même mis en œuvre dans les navigateurs.",
+    "Vcard":"Vcard",
+    "VcardExample":"Voici un composant web simple vcard",
+    "Creation":"Création",
+    "JavascriptExample":"Créez un fichier de javacript et importer votre modèle",
+    "HtmlExample":"Créez votre modèle vcard.html",
+    "Register":"Inscription",
+    "RegisterExample":"Maintenant inscrire à élimination directe. Je le fais dans un seul fichier qui contient tous les enregistrements",
+    "Usage":"Usage",
+    "UsageExample":"Utilisez une balise de vCard et passez dans certains paramètres. Je ai fait en sorte mine peut simplement prendre un objet, mais vous pouvez également régler chaque paramètre individuellement."
+}

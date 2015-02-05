@@ -2,10 +2,25 @@
 	"folders":
 	[
 		{
+			"file_exclude_patterns":
+			[
+				"*.sublime-workspace",
+				"*.sublime-project",
+				"*.log",
+				".gitignore"
+			],
+			"folder_exclude_patterns":
+			[
+				"public",
+				".mimosa",
+				"node_modules"
+			],
 			"follow_symlinks": true,
-			"path": "./",
-            "folder_exclude_patterns": ["public", ".mimosa", "node_modules"],
-            "file_exclude_patterns": ["*.sublime-workspace","*.sublime-project","*.log",".gitignore"]
+			"path": "./"
 		}
-	]
+	],
+	"settings":
+	{
+		"amd_butler_packages_base_path": "assets/javascripts"
+	}
 }

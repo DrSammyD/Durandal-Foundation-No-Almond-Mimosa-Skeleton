@@ -2,7 +2,7 @@
     "SubHeader":"Détection de dépendance Knockout dans les appels de lodash enchaînés.",
     "Summary":"Ce est une simple extension de KnockoutJS qui vous permet d'appeler des fonctions de lodash sur observableArrays et observables.",
     "Make":"Faire filtres observables",
-    "Chain":"chaînage dépendances",
-    "Efficient":"efficace",
+    "Chain":"Chaînage dépendances",
+    "Efficient":"Efficace",
     "EfficientSummary":"Fonctionne uniquement au point d'un changement observable. Ce ne est pas recalculer appels lodash avant ce point."
 }
