@@ -4,7 +4,8 @@
 		"Times":"Fois",
 		"Numbers":"Nombres",
 		"i18n":"i18n",
-		"Title":"Masque de saisie"
+		"Title":"Masque de saisie",
+		"Summary":"Cliquez sur un bouton pour voir la valeur dans le modèle de vue"
 		},
 	"Dates":{
 		"date": "dd/mm/yyyy",

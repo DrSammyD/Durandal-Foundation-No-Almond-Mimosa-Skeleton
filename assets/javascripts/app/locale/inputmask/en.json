@@ -4,7 +4,8 @@
 		"Times":"Times",
 		"Numbers":"Numbers",
 		"i18n":"i18n",
-		"Title":"Input Masks"
+		"Title":"Input Masks",
+		"Summary":"Click on a button to see the value in the view model"
 	},
 	"Dates":{
 		"date": "mm/dd/yyyy",

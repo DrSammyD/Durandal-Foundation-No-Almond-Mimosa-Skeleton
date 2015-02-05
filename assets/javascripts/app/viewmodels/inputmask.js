@@ -1,4 +1,4 @@
-﻿define(['plugins/http', 'durandal/app', 'knockout','moment', 'maskBinding','zurb/foundation.tab'], function (http, app, ko, moment) {
+﻿define(['plugins/http', 'durandal/app', 'knockout','moment','jquery','toastr', 'maskBinding','zurb/foundation.tab'], function (http, app, ko, moment,$,toastr) {
     var vm = function(){
         var that = this;
         that.tab = 'i18n';
@@ -58,6 +58,9 @@
             'EUR',
             'phone'
             ]);
+    };
+    vm.prototype.toastr=function(){
+        toastr.success.apply($,arguments);
     };
     return vm;  
 });

@@ -1,4 +1,4 @@
-define(['plugins/http', 'durandal/app', 'knockout', 'moment', 'maskBinding', 'zurb/foundation.tab'], function(http, app, ko, moment) {
+define(['knockout'], function(ko) {
     var vm = function() {};
     vm.prototype.activate = function() {
     };

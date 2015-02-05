@@ -9,6 +9,7 @@
         activate: function () {
             router.map([
                 { route: '', title:ko.translate("Welcome"), moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'durandal', title:ko.translate("Durandal"), moduleId: 'viewmodels/durandal', nav: true },
                 { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true },
                 { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true },
                 { route: 'markdown', title:ko.translate("Markdown"), moduleId: 'viewmodels/markdown', nav: true },

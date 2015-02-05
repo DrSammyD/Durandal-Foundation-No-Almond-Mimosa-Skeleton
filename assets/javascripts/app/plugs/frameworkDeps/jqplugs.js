@@ -1,1 +1,1 @@
-define(['i18next','datetimepicker'],function(i18,dp){});
+define(['i18next','datetimepicker','plugs/toastr/toastrOptions'],function(i18,dp){});

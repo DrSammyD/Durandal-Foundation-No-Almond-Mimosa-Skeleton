@@ -1,10 +1,11 @@
 <div>
     <h1>{{ko.t('inputmask:Inputmask.Title')}}</h1>
+    <h4>{{ko.t('inputmask:Inputmask.Summary')}}</h4>
     <dl class="tabs">
-      <dd class="tab-title"><a data-bind="click: function(){tab ='dates';}">{{ko.t('inputmask:Inputmask.Dates')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='times';}">{{ko.t('inputmask:Inputmask.Times')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='numbers';}">{{ko.t('inputmask:Inputmask.Numbers')}}</a></dd>
-      <dd class="tab-title"><a data-bind="click: function(){tab ='i18n';}">{{ko.t('inputmask:Inputmask.i18n')}}</a></dd>
+      <dd class="tab-title"><a class="button tiny" data-bind="click: function(){tab ='dates';}">{{ko.t('inputmask:Inputmask.Dates')}}</a></dd>
+      <dd class="tab-title"><a class="button tiny" data-bind="click: function(){tab ='times';}">{{ko.t('inputmask:Inputmask.Times')}}</a></dd>
+      <dd class="tab-title"><a class="button tiny" data-bind="click: function(){tab ='numbers';}">{{ko.t('inputmask:Inputmask.Numbers')}}</a></dd>
+      <dd class="tab-title"><a class="button tiny" data-bind="click: function(){tab ='i18n';}">{{ko.t('inputmask:Inputmask.i18n')}}</a></dd>
     </dl>
     <div class="tabs-content">
         <div class="content" data-bind="css.active: tab=='dates', onceIf:tab=='dates'" id="dates">
@@ -12,61 +13,61 @@
                 <li>
                     <label>dd/mm/yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['dd/mm/yyyy'],mask:'dd/mm/yyyy'">
-                    <span data-bind="text:$data['dd/mm/yyyy'],mask:'dd/mm/yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['dd/mm/yyyy'], click:function(){toastr($data['dd/mm/yyyy'])}, mask:'dd/mm/yyyy'"></a>
                 </li>
 
                 <li>
                     <label>date</label>
                     <input type="text" data-bind="value:ko.go($data)['date'],mask:'date'">
-                    <span data-bind="text:$data['date'],mask:'date'"></span>
+                    <a class="button tiny" data-bind="text:$data['date'], click:function(){toastr($data['date'])}, mask:'date'"></a>
                 </li>
 
                 <li>
                     <label>mm/dd/yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['mm/dd/yyyy'],mask:'mm/dd/yyyy'">
-                    <span data-bind="text:$data['mm/dd/yyyy'],mask:'mm/dd/yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['mm/dd/yyyy'], click:function(){toastr($data['mm/dd/yyyy'])}, mask:'mm/dd/yyyy'"></a>
                 </li>
 
                 <li>
                     <label>yyyy/mm/dd</label>
                     <input type="text" data-bind="value:ko.go($data)['yyyy/mm/dd'],mask:'yyyy/mm/dd'">
-                    <span data-bind="text:$data['yyyy/mm/dd'],mask:'yyyy/mm/dd'"></span>
+                    <a class="button tiny" data-bind="text:$data['yyyy/mm/dd'], click:function(){toastr($data['yyyy/mm/dd'])}, mask:'yyyy/mm/dd'"></a>
                 </li>
 
                 <li>
                     <label>dd.mm.yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['dd.mm.yyyy'],mask:'dd.mm.yyyy'">
-                    <span data-bind="text:$data['dd.mm.yyyy'],mask:'dd.mm.yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['dd.mm.yyyy'], click:function(){toastr($data['dd.mm.yyyy'])}, mask:'dd.mm.yyyy'"></a>
                 </li>
 
                 <li>
                     <label>dd-mm-yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['dd-mm-yyyy'],mask:'dd-mm-yyyy'">
-                    <span data-bind="text:$data['dd-mm-yyyy'],mask:'dd-mm-yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['dd-mm-yyyy'], click:function(){toastr($data['dd-mm-yyyy'])}, mask:'dd-mm-yyyy'"></a>
                 </li>
 
                 <li>
                     <label>mm.dd.yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['mm.dd.yyyy'],mask:'mm.dd.yyyy'">
-                    <span data-bind="text:$data['mm.dd.yyyy'],mask:'mm.dd.yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['mm.dd.yyyy'], click:function(){toastr($data['mm.dd.yyyy'])}, mask:'mm.dd.yyyy'"></a>
                 </li>
 
                 <li>
                     <label>mm-dd-yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['mm-dd-yyyy'],mask:'mm-dd-yyyy'">
-                    <span data-bind="text:$data['mm-dd-yyyy'],mask:'mm-dd-yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['mm-dd-yyyy'], click:function(){toastr($data['mm-dd-yyyy'])}, mask:'mm-dd-yyyy'"></a>
                 </li>
 
                 <li>
                     <label>yyyy.mm.dd</label>
                     <input type="text" data-bind="value:ko.go($data)['yyyy.mm.dd'],mask:'yyyy.mm.dd'">
-                    <span data-bind="text:$data['yyyy.mm.dd'],mask:'yyyy.mm.dd'"></span>
+                    <a class="button tiny" data-bind="text:$data['yyyy.mm.dd'], click:function(){toastr($data['yyyy.mm.dd'])}, mask:'yyyy.mm.dd'"></a>
                 </li>
 
                 <li>
                     <label>yyyy-mm-dd</label>
                     <input type="text" data-bind="value:ko.go($data)['yyyy-mm-dd'],mask:'yyyy-mm-dd'">
-                    <span data-bind="text:$data['yyyy-mm-dd'],mask:'yyyy-mm-dd'"></span>
+                    <a class="button tiny" data-bind="text:$data['yyyy-mm-dd'], click:function(){toastr($data['yyyy-mm-dd'])}, mask:'yyyy-mm-dd'"></a>
                 </li>
             </ul>
         </div>
@@ -75,73 +76,71 @@
                 <li>
                     <label>datetimeAmerican</label>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'],mask:'datetimeAmerican'">
-                    <span data-bind="text:$data['datetimeAmerican'],mask:'datetimeAmerican'"></span>
+                    <a class="button tiny" data-bind="text:$data['datetimeAmerican'], click:function(){toastr($data['datetimeAmerican'])}, mask:'datetimeAmerican'"></a>
                 </li>
                 <li>
                     <label>datetime12American</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime12American'],mask:'datetime12American'">
-                    <span data-bind="text:$data['datetime12American'],mask:'datetime12American'"></span>
+                    <a class="button tiny" data-bind="text:$data['datetime12American'], click:function(){toastr($data['datetime12American'])}, mask:'datetime12American'"></a>
                 </li>
                 <li>
                     <label>datetime</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime'],mask:'datetime'">
-                    <span data-bind="text:$data['datetime'],mask:'datetime'"></span>
+                    <a class="button tiny" data-bind="text:$data['datetime'], click:function(){toastr($data['datetime'])}, mask:'datetime'"></a>
                 </li>
                 <li>
                     <label>datetime12</label>
                     <input type="text" data-bind="value:ko.go($data)['datetime12'],mask:'datetime12'">
-                    <span data-bind="text:$data['datetime12'],mask:'datetime12'"></span>
+                    <a class="button tiny" data-bind="text:$data['datetime12'], click:function(){toastr($data['datetime12'])}, mask:'datetime12'"></a>
                 </li>
                 <li>
                     <label>hh:mm t</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm t'],mask:'hh:mm t'">
-                    <span data-bind="text:$data['hh:mm t'],mask:'hh:mm t'"></span>
+                    <a class="button tiny" data-bind="text:$data['hh:mm t'], click:function(){toastr($data['hh:mm t'])}, mask:'hh:mm t'"></a>
                 </li>
                 <li>
                     <label>h:s t</label>
                     <input type="text" data-bind="value:ko.go($data)['h:s t'],mask:'h:s t'">
-                    <span data-bind="text:$data['h:s t'],mask:'h:s t'"></span>
+                    <a class="button tiny" data-bind="text:$data['h:s t'], click:function(){toastr($data['h:s t'])}, mask:'h:s t'"></a>
                 </li>
                 <li>
                     <label>hh:mm:ss</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm:ss'],mask:'hh:mm:ss'">
-                    <span data-bind="text:$data['hh:mm:ss'],mask:'hh:mm:ss'"></span>
+                    <a class="button tiny" data-bind="text:$data['hh:mm:ss'], click:function(){toastr($data['hh:mm:ss'])}, mask:'hh:mm:ss'"></a>
                 </li>
                 <li>
                     <label>hh:mm</label>
                     <input type="text" data-bind="value:ko.go($data)['hh:mm'],mask:'hh:mm'">
-                    <span data-bind="text:$data['hh:mm'],mask:'hh:mm'"></span>
+                    <a class="button tiny" data-bind="text:$data['hh:mm'], click:function(){toastr($data['hh:mm'])}, mask:'hh:mm'"></a>
                 </li>
                 <li>
                     <label>mm/yyyy</label>
                     <input type="text" data-bind="value:ko.go($data)['mm/yyyy'],mask:'mm/yyyy'">
-                    <span data-bind="text:$data['mm/yyyy'],mask:'mm/yyyy'"></span>
+                    <a class="button tiny" data-bind="text:$data['mm/yyyy'], click:function(){toastr($data['mm/yyyy'])}, mask:'mm/yyyy'"></a>
                 </li>
             </ul>
         </div>
         <div class="content" data-bind="css.active: tab=='numbers',onceIf:tab=='numbers'" id="numbers">
             <ul class="small-block-grid-3">
                 <li>
-                    <span>percentage</span>
+                    <a>percentage</a>
                     <input type="text" data-bind="value:ko.go($data)['percentage'], mask:'percentage'">
-                    <span data-bind="text:ko.go($data)['percentage'], mask:'percentage'"></span>
-                    <span data-bind="text:ko.go($data)['percentage']"></span>
+                    <a class="button tiny" data-bind="text:$data['percentage'], click:function(){toastr($data['percentage'])},  mask:'percentage'"></a>
                 </li>
                 <li>
-                    <span>percentageBase100</span>
+                    <a>percentageBase100</a>
                     <input type="text" data-bind="value:ko.go($data)['percentageBase100'], mask:'percentageBase100'">
-                    <span data-bind="text:ko.go($data)['percentageBase100'], mask:'percentageBase100'"></span>
-                    <span data-bind="text:ko.go($data)['percentageBase100']"></span>
+                    <a class="button tiny" data-bind="text:$data['percentageBase100'], click:function(){toastr($data['percentageBase100'])},  mask:'percentageBase100'"></a>
                 </li>
                 <li>
-                    <span>USD</span>
+                    <a>USD</a>
                     <input type="text" data-bind="value:ko.go($data)['USD'], mask:'USD'">
-                    <span data-bind="text:ko.go($data)['USD'], mask:'USD'"></span>
+                    <a class="button tiny" data-bind="text:$data['USD'], click:function(){toastr($data['USD'])},  mask:'USD'"></a>
                 </li>
                 <li>
-                    <span>EUR</span>
+                    <a>EUR</a>
                     <input type="text" data-bind="value:ko.go($data)['EUR'], mask:'EUR'">
-                    <span data-bind="text:ko.go($data)['EUR'], mask:'EUR'"></span>
+                    <a class="button tiny" data-bind="text:$data['EUR'], click:function(){toastr($data['EUR'])},  mask:'EUR'"></a>
                 </li>
             </ul>
         </div>
@@ -149,11 +148,11 @@
             <ul class="small-block-grid-3">
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['datetimeAmerican'], mask: ko.t('inputmask:Dates.datetime')">
-                    <span data-bind="text:ko.go($data)['datetimeAmerican'],mask:ko.t('inputmask:Dates.datetime')"></span>
+                    <a class="button tiny" data-bind="text:$data['datetimeAmerican'], click:function(){toastr($data['datetimeAmerican'])}, mask:ko.t('inputmask:Dates.datetime')"></a>
                 </li>
                 <li>
                     <input type="text" data-bind="value:ko.go($data)['date'], mask: ko.t('inputmask:Dates.date')">
-                    <span data-bind="text:ko.go($data)['date'],mask:ko.t('inputmask:Dates.date')"></span>
+                    <a class="button tiny" data-bind="text:$data['date'], click:function(){toastr($data['date'])}, mask:ko.t('inputmask:Dates.date')"></a>
                 </li>
             </ul>
         </div>
