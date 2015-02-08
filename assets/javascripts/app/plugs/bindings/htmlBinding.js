@@ -3,6 +3,7 @@ define(['knockout', 'virtual-dom', 'vdom-virtualize', 'injectBinding', 'ko-punch
         ko.utils.extend(allBindings, ko.utils.injectBinding(allBindings, 'lastHtml', {
             value: ''
         }));
+        return { 'controlsDescendantBindings': true };
     };
     var defaultBindings = ko.bindingHandlers;
     ko.bindingHandlers.html.approvedBindings={
