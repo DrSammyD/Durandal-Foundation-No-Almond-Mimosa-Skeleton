@@ -21,7 +21,7 @@
     "knockout-deferred-updates": "~3.2.1",
     "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git#master",
     "Knockout.Hotkeys": "~1.0.1",
-    "knockout.punches": "~0.5.0",
+    "knockout.punches": "git://github.com/DrSammyD/knockout.punches.git#master",
     "modernizr": "~2.7.1",
     "moment": "git://github.com/moment/moment.git#~2.9.0",
     "moment-timezone": "~0.2.5",
@@ -33,7 +33,8 @@
     "toastr": "~2.0.1",
     "velocity": "~1.1.0",
     "kodash": "~2.0.3",
-    "lodash": "2.4.1"
+    "lodash": "2.4.1",
+    "virtual-dom":"git://github.com/Matt-Esch/virtual-dom.git#1.3.0"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"

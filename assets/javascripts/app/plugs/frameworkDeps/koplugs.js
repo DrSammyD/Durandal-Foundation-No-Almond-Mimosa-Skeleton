@@ -8,6 +8,7 @@ define(['ko-go',
         'plugs/bindings/onceIf',
         'plugs/bindings/selectizeBinding',
         'maskBinding',
+        'htmlBinding',
         'components/register'
     ],
     function(){});

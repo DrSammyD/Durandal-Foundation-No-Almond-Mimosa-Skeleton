@@ -75,7 +75,7 @@
             if(allBindingsAccessor.get('selectizeMultiple'))
                $(element).prop('multiple',true);
             $.extend(allBindingsAccessor, inject_binding(allBindingsAccessor,'optionsAfterRender',function(el){
-                $el.attr('value', el[ko.bindingHandlers.options[_key].slice(1)]||el['value']);
+                $(el).attr('value', el[ko.bindingHandlers.options[_key].slice(1)]||el['value']);
             }));
             var ret= ko.bindingHandlers.options.init(element,valueAccessor, allBindingsAccessor, viewModel, bindingContext);
 
@@ -100,7 +100,7 @@
             return ret;
             
         }
-    }
+    };
     ko.bindingHandlers.selectizeCaption = {
         update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
             ko.bindingHandlers.optionsCaption.update(element,valueAccessor, allBindingsAccessor, viewModel, bindingContext);

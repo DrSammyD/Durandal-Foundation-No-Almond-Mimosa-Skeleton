@@ -96,6 +96,9 @@ exports.config =
           "locale/":"moment/locale/"
           "moment.js"
         ]
+        "virtual-dom":[
+          'dist'
+        ]
         "velocity":[
           "velocity.js"
           "velocity.ui.js"
@@ -127,7 +130,7 @@ exports.config =
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
         #infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
-        infered.build= true
+        infered.pragmas= build: true
         infered.optimize='uglify2'
         return infered
 
@@ -138,6 +141,7 @@ exports.config =
       optimize:'uglify2'
       compileWith: 'handlebars'
       extension: 'hbs'
+      pragmas: build: true
 
   csslint:
     exclude:[

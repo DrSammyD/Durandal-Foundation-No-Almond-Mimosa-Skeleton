@@ -23,6 +23,10 @@ requirejs.config({
         'koplugs': 'plugs/frameworkDeps/koplugs',
         'lodash':'../vendor/lodash/lodash',
         'maskBinding':'plugs/bindings/maskBinding',
+        'htmlBinding':'plugs/bindings/htmlBinding',
+        'datetimepickerBinding':'plugs/bindings/datetimepickerBinding',
+        'onceIf':'plugs/bindings/onceIf',
+        'selectizeBinding':'plugs/bindings/selectizeBinding',
         'microplugin': '../vendor/microplugin/microplugin',
         'moment':'../vendor/moment/moment',
         'moment-timezone':'../vendor/moment-timezone/moment-timezone-with-data-2010-2020',
@@ -40,6 +44,8 @@ requirejs.config({
         'transitions/entranceSlide':'plugs/durandal/entranceSlide',
         'velocity': '../vendor/velocity/velocity',
         'velocity-ui': '../vendor/velocity/velocity.ui',
+        'virtual-dom': 'plugs/virtual-dom/virtual-dom',
+        'vdom-virtualize': 'plugs/virtual-dom/vdom-virtualize',
         'zurb' : '../vendor/foundation'
     },
     shim: {

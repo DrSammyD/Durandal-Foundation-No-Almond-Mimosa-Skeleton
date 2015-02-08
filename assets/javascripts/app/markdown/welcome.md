@@ -1,6 +1,10 @@
-#Welcome to Bitcadia
+#{{ko.t('welcome:Header')}}
 
-This is a stack that I've been building on, trying to address pain points of web development, and I think I have it in a good state right now, good enough to show it to you anyway.
+{{ko.t('welcome:Summary')}}
 
-###Separating Concerns
-Separate your views from your view models using [durandal](#durandal), your text from you view models using i18next (click set language to see what I mean), your [markdown](#markdown) from you view models using requirejs, your input from your values using [inputmasks](#inputmask), and your [web components](#webcomponent) from your views and viewmodels using knockout.
+###{{ko.t('welcome:Separate')}}
+- {{ko.t('welcome:SeparateDurandal')}} [{{ko.t('welcome:Durandal')}}](#durandal)
+- {{ko.t('welcome:I18Next')}}
+- {{{ko.t('welcome:MarkdownSummary',{link:'[{{ko.t(\'welcome:Markdown\')}}](#markdown)'})}}}
+- Separate your input from your values using [input masks](#inputmask)
+- Separate and your [web components](#webcomponent) from your views and viewmodels using knockout.
