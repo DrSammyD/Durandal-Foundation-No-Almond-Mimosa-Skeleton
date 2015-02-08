@@ -1,10 +1,14 @@
 {
-    "Header":"Welcome to Bitcadia",
-    "Summary":"This is a stack that I've been building on, trying to address pain points of web development, and I think I have it in a good state right now, good enough to show it to you anyway.",
-    "Separate":"Separating Concerns",
-    "SeparateDurandal":"Separate your views from your view models using",
+    "Header":"Bienvenue à Bitcadia",
+    "Summary":"Ce est une pile que je ai été la construction, essayant d'aborder les points de développement web de la douleur, et je pense que je l'ai dans un bon état en ce moment, assez bon pour montrer à vous de toute façon.",
+    "Separate":"Séparation préoccupations",
+    "SeparateDurandal":"Séparez vos vues de vos modèles de vue à l'aide __link__",
     "Durandal":"Durandal",
-    "I18Next":"Separate your text from your view using i18next (click set language to see what I mean)",
-    "MarkdownSummary":"Separate your __link__ from you view models using requirejs",
-    "Markdown":"markdown"
+    "I18Next":"Séparez votre texte à partir de votre point de vue en utilisant i18next (cliquez sur la langue ensemble pour voir ce que je veux dire)",
+    "MarkdownSummary":"Séparez votre __link__ de vous affichez modèles utilisant requirejs",
+    "Markdown":"démarque",
+    "InputmaskSummary":"Séparez votre entrée de vos valeurs en utilisant __link__",
+    "Inputmask":"masques de saisie",
+    "WebcomponentSummary":"Indépendante et votre __link__ de vos points de vue et ViewModels utilisant knockout",
+    "Webcomponent":"composants web"
 }

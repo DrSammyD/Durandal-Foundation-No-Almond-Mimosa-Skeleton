@@ -30,7 +30,7 @@ exports.config =
   sass:
     lib: require('node-sass')
     extensions: ["sass", "scss"]
-    includePaths: ['stylesheets/vendor/foundation','stylesheets/vendor/Hover/scss']
+    includePaths: ['stylesheets/vendor/foundation','stylesheets/vendor/Hover/scss','stylesheets/vendor/font-awesome']
     
   requireBuildTextPluginInclude:
     pluginPath: 'text'
@@ -52,7 +52,6 @@ exports.config =
         ]
         "durandal": [
           {
-            img: "../../img"
             js: "durandal"
             css: "durandal"
           }
@@ -71,7 +70,7 @@ exports.config =
           "scss/_hacks.scss":'/hover/_hacks.scss'
           "scss/_mixins.scss":'/hover/_mixins.scss'
           "scss/_options.scss":'/hover/_options.scss'
-        ]
+        ],
         "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
         "i18next":['i18next.amd.withJQuery.js'],
@@ -79,25 +78,29 @@ exports.config =
         "jquery-placeholder":['jquery.placeholder.js']
         'toastr':['toastr.js','toastr.css']
         "font-awesome": [
-          { font: "../../font" }
-          "css/font-awesome.css"
-          "css/font-awesome-ie7.css"
-        ]
-        "smalot-bootstrap-datetimepicker":[
-          'js':'smalot-bootstrap-datetimepicker'
+          'fonts': "../../fonts/vendor/font-awesome"
+          "scss/_animated.scss"
+          "scss/_bordered-pulled.scss"
+          "scss/_core.scss"
+          "scss/_fixed-width.scss"
+          "scss/_icons.scss"
+          "scss/_larger.scss"
+          "scss/_list.scss"
+          "scss/_mixins.scss"
+          "scss/_path.scss"
+          "scss/_rotated-flipped.scss"
+          "scss/_stacked.scss"
+          "scss/_variables.scss"
         ]
         "knockout-es5":[
           'dist'
         ]
         "lodash":[
-          'dist'
+          'lodash.js'
         ]
         "moment":[
           "locale/":"moment/locale/"
           "moment.js"
-        ]
-        "virtual-dom":[
-          'dist'
         ]
         "velocity":[
           "velocity.js"

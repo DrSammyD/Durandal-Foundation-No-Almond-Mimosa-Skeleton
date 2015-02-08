@@ -14,7 +14,7 @@ define(['durandal/system', 'durandal/composition', 'velocity', 'q'], function(sy
         if(context.child){
             queue.push(v.animate(context.child, {
                     opacity: [1,0]
-                },{display:'inherit'}, 300));
+                },{display:'fixed'}, 300));
         }
 
         v.Utilities.queue(queue);
