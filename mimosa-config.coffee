@@ -71,7 +71,7 @@ exports.config =
           "scss/_mixins.scss":'/hover/_mixins.scss'
           "scss/_options.scss":'/hover/_options.scss'
         ],
-        "knockout.punches":['knockout.punches.js']
+        "knockout.punches":['build/output/knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
         "i18next":['i18next.amd.withJQuery.js'],
         "modernizr":['modernizr.js']
