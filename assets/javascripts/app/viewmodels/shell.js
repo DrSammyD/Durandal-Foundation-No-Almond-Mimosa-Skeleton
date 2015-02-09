@@ -13,7 +13,8 @@
                 { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true },
                 { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true },
                 { route: 'markdown', title:ko.translate("Markdown"), moduleId: 'viewmodels/markdown', nav: true },
-                { route: 'webcomponent', title:ko.translate("Webcomponent"), moduleId: 'viewmodels/webcomponent', nav: true }
+                { route: 'webcomponent', title:ko.translate("Webcomponent"), moduleId: 'viewmodels/webcomponent', nav: true },
+                { route: 'i18n', title:ko.translate("I18n"), moduleId: 'viewmodels/i18n', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();

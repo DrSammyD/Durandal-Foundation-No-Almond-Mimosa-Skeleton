@@ -1,8 +1,9 @@
 {
-    "Lang": "Définir la langue",
-    "Welcome":"Bienvenue",
+    "I18n":"Localisation",
     "Inputmasks":"Masque de saisie",
     "Kodash":"Kodash",
+    "Lang": "Définir la langue",
     "Markdown":"Démarque",
-    "Webcomponent":"Web Composants"
+    "Webcomponent":"Web Composants",
+    "Welcome":"Bienvenue"
 }

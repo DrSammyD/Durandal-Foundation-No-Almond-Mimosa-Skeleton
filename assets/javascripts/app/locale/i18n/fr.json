@@ -1,0 +1,13 @@
+{
+    "Title":"localisation",
+    "Summary":"La localisation ne est cuit dans ce cadre. Toutes les chaînes qui ne sont pas le code que vous voyez sur ce site sont traduisibles. Appuyez sur __code__ et il se traduira français",
+    "Example":"exemple",
+    "HtmlSummary":"Ce qui suit est un exemple de la façon de rendre le travail de l'internationalisation dans __code__",
+    "JsonSummary":"Notre fichier de localisation sera en __code__",
+    "I18nKey":"certainesDonnant:Propriété",
+    "ModuleName":"donnant/certainesDonnant.html",
+    "I18nFile":"locale/certainesDonnant/fr.json",
+    "I18nProp":"Propriété",
+    "I18nStr":"Certains chaîne que vous voulez être traduit",
+    "Output":"Voici la sortie"
+}

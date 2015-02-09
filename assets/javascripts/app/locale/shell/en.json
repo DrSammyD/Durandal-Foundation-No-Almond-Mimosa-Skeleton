@@ -1,8 +1,9 @@
 {
-	"Lang":"Set Language",
-    "Welcome":"Welcome",
+    "I18n":"Localization",
     "Inputmasks":"Input Masks",
     "Kodash":"Kodash",
+    "Lang":"Set Language",
     "Markdown":"Markdown",
-    "Webcomponent":"Web Components"
+    "Webcomponent":"Web Components",
+    "Welcome":"Welcome"
 }

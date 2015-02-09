@@ -1,0 +1,13 @@
+{
+    "Title":"Localization",
+    "Summary":"Localization is baked into this framework. All strings which aren't code that you see on this site are translatable. Press __code__ and it will translate to french",
+    "Example":"Example",
+    "HtmlSummary":"The following is an example of how to make internationalization work in __code__",
+    "JsonSummary":"Our localization file will be in __code__",
+    "I18nKey":"someView:Property",
+    "ModuleName":"views/someView.html",
+    "I18nFile":"locale/someView/en.json",
+    "I18nProp":"Property",
+    "I18nStr":"Some string that you want to be translated",
+    "Output":"Here is the output"
+}
