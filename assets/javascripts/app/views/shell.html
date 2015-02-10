@@ -2,24 +2,24 @@
     <nav class="top-bar">
         <ul class="title-area">
             <li class="name">
-                <h1></h1>
+                <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+                    <i class="fa fa-home"></i>
+                    <span>Bitcadia</span>
+                </a>
             </li>
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+            <li class="toggle-topbar menu-icon"><a>Menu</a></li>
         </ul>
-        <section class="top-bar-section">
-            <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-                <i class="fa fa-home"></i>
-                <span>Bitcadia</span>
-            </a>
-                
+        <section class="top-bar-section">                
             <ul class="right">
                 {{#foreach router.navigationModel()}}
                 <li data-bind="css: { active: isActive }">
                     <a data-bind="attr: { href: hash }, html: title"></a>
                 </li>
                 {{/foreach}}
+            </ul>
+            <ul class="left">
                 <li>                    
-                    <a data-bind="click: switchLang "class="button">{{ko.t("Lang")}}</a>
+                    <a data-bind="click: switchLang "class="hvr-shutter-in-vertical">{{ko.t("Lang")}}</a>
                 </li>
             </ul>
         </section>

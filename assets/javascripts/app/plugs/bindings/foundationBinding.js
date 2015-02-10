@@ -1,7 +1,8 @@
 define(['knockout','jquery','zurb/foundation'],function(ko,$){
+    var req =require;
     ko.bindingHandlers.foundation={
         init:function(element,valueAccessor,allBindings){
-            require(['zurb/foundation.'+ko.unwrap(valueAccessor())],function(){
+            req(['zurb/foundation.'+ko.unwrap(valueAccessor())],function(){
                 $(element).foundation();
             });
         }

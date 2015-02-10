@@ -133,7 +133,7 @@ exports.config =
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
         infered.pragmas= build: true
-        infered.optimize='uglify2'
+        infered.optimize='none'
         return infered
 
   server:
