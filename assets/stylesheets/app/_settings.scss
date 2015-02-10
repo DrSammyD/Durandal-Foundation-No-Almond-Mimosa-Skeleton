@@ -52,9 +52,9 @@
 
 // We use these as default colors throughout
 $primary-color: #B02050;
-// $secondary-color: #e7e7e7;
+$secondary-color: #e7e7e7;
 // $alert-color: #f04124;
-// $success-color: #43AC6A;
+$success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
@@ -1207,10 +1207,10 @@ $primary-color: #B02050;
 // $slowDuration: .5s !default;
 
 // Colors
-// $primaryColor: #e1e1e1 !default;
-// $secondaryColor: #666 !default;
-// $highlightColor: #ccc !default;
-// $activeColor: #2098D1 !default;
+//$primaryColor: $primary-color;
+//$secondaryColor: $secondary-color;
+//$highlightColor: $success-color;
+$activeColor: $primary-color; 
 // $shadowColor: rgba(0, 0, 0, .6) !default;
 
 // Speech bubbles options

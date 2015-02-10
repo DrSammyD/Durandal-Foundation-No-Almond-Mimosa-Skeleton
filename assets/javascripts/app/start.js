@@ -17,7 +17,7 @@ define(['durandal/app',
             baseUrl: './javascripts/app'
         });
         ko.punches.enableAll();
-        app.title = 'Durandal';
+        app.title = 'Bitcadia';
 
 
         app.configurePlugins({

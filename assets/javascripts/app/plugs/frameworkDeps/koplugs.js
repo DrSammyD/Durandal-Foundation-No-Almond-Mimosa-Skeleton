@@ -1,6 +1,7 @@
 define(['ko-go',
         'knockout-deferred-updates',
         'ko-punches',
+        'plugs/ko/interpolationMarkup',
         'ko-hotkeys',
         'kodash',
         'locale/ko-t',
@@ -9,6 +10,7 @@ define(['ko-go',
         'selectizeBinding',
         'maskBinding',
         'htmlBinding',
+        'foundationBinding',
         'components/register'
     ],
     function(){});

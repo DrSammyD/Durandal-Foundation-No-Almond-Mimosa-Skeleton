@@ -71,7 +71,7 @@ exports.config =
           "scss/_mixins.scss":'/hover/_mixins.scss'
           "scss/_options.scss":'/hover/_options.scss'
         ],
-        "knockout.punches":['build/output/knockout.punches.js']
+        "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
         "i18next":['i18next.amd.withJQuery.js'],
         "modernizr":['modernizr.js']
@@ -132,7 +132,6 @@ exports.config =
         infered.insertRequire=['main']
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
-        #infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
         infered.pragmas= build: true
         infered.optimize='uglify2'
         return infered
@@ -144,7 +143,8 @@ exports.config =
       optimize:'uglify2'
       compileWith: 'handlebars'
       extension: 'hbs'
-      pragmas: build: true
+      pragmas:
+        build: true
 
   csslint:
     exclude:[

@@ -24,6 +24,7 @@ requirejs.config({
         'lodash':'../vendor/lodash/lodash',
         'maskBinding':'plugs/bindings/maskBinding',
         'htmlBinding':'plugs/bindings/htmlBinding',
+        'foundationBinding':'plugs/bindings/foundationBinding',
         'datetimepickerBinding':'plugs/bindings/datetimepickerBinding',
         'onceIf':'plugs/bindings/onceIf',
         'selectizeBinding':'plugs/bindings/selectizeBinding',

@@ -20,7 +20,7 @@
     "knockout-deferred-updates": "~3.2.1",
     "knockout-es5": "git://github.com/SteveSanderson/knockout-es5.git#master",
     "Knockout.Hotkeys": "~1.0.1",
-    "knockout.punches": "git://github.com/DrSammyD/knockout.punches.git#master",
+    "knockout.punches": "~0.5.1",
     "modernizr": "~2.7.1",
     "moment": "git://github.com/moment/moment.git#~2.9.0",
     "moment-timezone": "~0.2.5",
