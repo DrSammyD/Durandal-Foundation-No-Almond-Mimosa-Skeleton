@@ -36,6 +36,7 @@ requirejs.config({
         'plugs':'../app/plugs',
         'q': '../vendor/q/q',
         'selectize': '../vendor/selectize/selectize',
+        'setImmediate': '../vendor/setImmediate/setImmediate',
         'sifter': '../vendor/sifter/sifter',
         'text': '../vendor/requirejs-texport/text',
         'toastr': '../vendor/toastr/toastr',

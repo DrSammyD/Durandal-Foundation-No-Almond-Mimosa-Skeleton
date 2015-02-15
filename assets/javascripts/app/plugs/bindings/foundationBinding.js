@@ -1,9 +1,26 @@
-define(['knockout','jquery','zurb/foundation'],function(ko,$){
+define(['knockout','jquery',
+'zurb/foundation',
+'zurb/foundation.abide',
+'zurb/foundation.accordion',
+'zurb/foundation.alert',
+'zurb/foundation.clearing',
+'zurb/foundation.dropdown',
+'zurb/foundation.equalizer',
+'zurb/foundation.interchange',
+'zurb/foundation.joyride',
+'zurb/foundation.magellan',
+'zurb/foundation.offcanvas',
+'zurb/foundation.orbit',
+'zurb/foundation.reveal',
+'zurb/foundation.slider',
+'zurb/foundation.tab',
+'zurb/foundation.tooltip',
+'zurb/foundation.topbar'],function(ko,$){
     var req =require;
     ko.bindingHandlers.foundation={
         init:function(element,valueAccessor,allBindings){
             req(['zurb/foundation.'+ko.unwrap(valueAccessor())],function(){
-                $(element).foundation();
+                setTimeout(function(){$(document).foundation();},3000)
             });
         }
     };

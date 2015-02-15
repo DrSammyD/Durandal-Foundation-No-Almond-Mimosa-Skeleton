@@ -1,4 +1,5 @@
-﻿define(['plugins/router', 'durandal/app','i18next','locale/current-locale','knockout'], function (router, app, i18next, locale,ko) {
+﻿
+define(['plugins/router', 'durandal/app','i18next','locale/current-locale','knockout'], function (router, app, i18next, locale,ko) {
     return {
         router: router,
         search: function() {
@@ -20,7 +21,7 @@
             return router.activate();
         },
         switchLang:function(){
-            locale()=="fr"?i18next.setLng("en"):i18next.setLng("fr");
+            locale()=="en"?locale("fr"):locale("en");
         }
     };
 });

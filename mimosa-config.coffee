@@ -150,5 +150,4 @@ exports.config =
     exclude:[
       'stylesheets/app/site.scss'
       'stylesheets/starterkit.css'
-      '/stylesheets/vendor/hover/scss/hover.scss'
    ]

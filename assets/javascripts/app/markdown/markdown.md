@@ -1,5 +1,5 @@
 <!-- export name="explanation" -->
-{{ko.t('markdown:Markdown')}}!!!
+{{ko.t('markdown:Markdown')}}
 ===========
 {{ko.t('markdown:MdIntro')}}
 

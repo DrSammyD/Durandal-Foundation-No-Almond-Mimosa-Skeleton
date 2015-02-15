@@ -37,7 +37,7 @@ vm.observableIntersection= vm.observableFilter._().map(function(item){return ite
 - vm.observableIntersection {{JSON.stringify(observableIntersection())}}
 
 ##{{ko.t('kodash:Efficient')}}
-{{ko.t('kodash:Summary')}}
+{{ko.t('kodash:EfficientSummary')}}
 
 ```
 vm.compRunCount = ko.observable(0);

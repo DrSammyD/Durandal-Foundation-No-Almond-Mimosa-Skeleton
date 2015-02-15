@@ -1,28 +1,27 @@
-﻿
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name">
-                <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-                    <i class="fa fa-home"></i>
-                    <span>Bitcadia</span>
-                </a>
-            </li>
-            <li class="toggle-topbar menu-icon"><a>Menu</a></li>
+﻿    <nav class="top-bar" data-topbar role="navigation" data-bind="foundation:'topbar'">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#"><i class="fa fa-home"></i>Bitcadia</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">          
+          {{#foreach router.navigationModel()}}
+          <li data-bind="css.active: isActive">
+              <a href="{{hash}}" class="hvr-shutter-out-vertical">{{{title}}}</a>
+          </li>
+          {{/foreach}}
         </ul>
-        <section class="top-bar-section">                
-            <ul class="right">
-                {{#foreach router.navigationModel()}}
-                <li data-bind="css: { active: isActive }">
-                    <a data-bind="attr: { href: hash }, html: title"></a>
-                </li>
-                {{/foreach}}
-            </ul>
-            <ul class="left">
-                <li>                    
-                    <a data-bind="click: switchLang "class="hvr-shutter-in-vertical">{{ko.t("Lang")}}</a>
-                </li>
-            </ul>
-        </section>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><a data-bind="click: switchLang " class="hvr-shutter-out-vertical">{{ko.t("shell:Lang")}}</a></li>
+        </ul>
+      </section>
     </nav>
     <div class="row">
         <div class="small-12">
