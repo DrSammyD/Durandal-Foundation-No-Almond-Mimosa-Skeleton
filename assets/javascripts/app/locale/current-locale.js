@@ -3,7 +3,7 @@ define(['knockout', 'i18next', 'moment', 'text!locale/supported.json','datetimep
     supportedLangs= JSON.parse(supportedLangs);
     var locale = ko.observable(i18next.lng());
     locale.extend({ notify: 'always' });
-    locale.ns={shell:ko.observable(0)};
+    locale.ns={};
     locale.equalityComparer = function(val1, val2) {
          return JSON.stringify(val1) == JSON.stringify(val2);
     };
@@ -24,6 +24,8 @@ define(['knockout', 'i18next', 'moment', 'text!locale/supported.json','datetimep
     };
     i18next.init({
         customLoad: function (lng, ns, cb, loadComplete) {
+            if(ns=="translation")
+                return loadComplete(null,{translation:{}})
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);
                 moment.locale(i18next.lng());
@@ -40,8 +42,7 @@ define(['knockout', 'i18next', 'moment', 'text!locale/supported.json','datetimep
             if(supportedLangs.moment.indexOf(lng)!=-1)
                 deps.push('../vendor/moment/locale/'+lng);
             req(deps, loadcb);
-        },
-        ns:'shell'
+        }
     });
 
     comp=ko.computed({

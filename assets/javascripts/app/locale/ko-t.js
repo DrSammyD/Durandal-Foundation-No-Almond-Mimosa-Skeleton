@@ -33,7 +33,7 @@ define(['knockout', 'i18next', 'locale/current-locale'], function(ko, i18next, l
             locale();
             if (!i18next.exists(key)){
                 var ns=key.split(':')[0];
-                locale[ns]=locale[ns]||ko.observable();
+                (locale.ns[ns]=locale.ns[ns]||ko.observable(0))();
                 requestKey(ns);
             }
             var unwrapped = {};
