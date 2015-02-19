@@ -40,7 +40,7 @@ define(['knockout', 'virtual-dom', 'vdom-virtualize', 'injectBinding', 'ko-punch
             var end = element.nextSibling;
             while(tempEl.current.childNodes.length) {
                 ko.cleanNode(tempEl.current.childNodes[0]);
-                element.parentElement.insertBefore(tempEl.current.childNodes[0],end);
+                (element.parentElement||element.parentNode).insertBefore(tempEl.current.childNodes[0],end);
             }
         } else {
             tempEl = createVirtualValueElements(element.childNodes, last.value, oldHtml);
