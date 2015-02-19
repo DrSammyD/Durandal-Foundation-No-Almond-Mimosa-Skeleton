@@ -69,9 +69,9 @@ define(['knockout','ko-punches'], function(ko,ko_punches) {
                     outerMatch = textToParse.match(/^([\s\S]*?)\{\{([\s\S]*)}}([\s\S]*)$/);
                     if (outerMatch) {
                         for (i = middle.length - 1; i >= 0; i--) {
-                            node.parentElement.removeChild(middle[i]);
+                            (node.parentElement||node.parentNode).removeChild(middle[i]);
                         }
-                        node.parentElement.removeChild(current);
+                        (node.parentElement||node.parentNode).removeChild(current);
                         outerTextCallback(outerMatch[1]);
                         innerParse(outerMatch[2]);
                         outerTextCallback(outerMatch[3]);
